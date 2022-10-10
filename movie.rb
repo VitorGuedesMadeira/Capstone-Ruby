@@ -10,16 +10,16 @@ class Movie < Item
   end
 
   def self.list_movies(things)
-    things.each do |thing|
-      puts "\nThe movie published date is: #{thing.publish_date}" if thing.instance_of? Movie
+    things.each_with_index do |thing, index|
+      puts "[#{index}] The movie published date is: #{thing.publish_date}" if thing.instance_of? Movie
     end
   end
 
   def self.add_movie
-    print "\nType a publish date: "
+    print "\nType a publish date [year]: "
     print "\nAnswer: "
     movie_date = gets.chomp.to_i
-    print 'Is this movie silent? [y/n]'
+    print 'Is it a silent movie? [y/n]'
     print "\nAnswer: "
     movie_silent = gets.chomp
     silent_answer = case movie_silent.downcase
@@ -36,7 +36,6 @@ class Movie < Item
 
     new_source = Source.new(source_name)
     new_source.add_item(new_movie)
-
     new_movie
   end
 

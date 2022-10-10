@@ -16,6 +16,9 @@ class Source
     things.each do |thing|
       sources_names << thing.source.name unless sources_names.include?(thing.source.name)
     end
+    sources_names.each_with_index do |name, index|
+      puts "[#{index}] Source: #{name}"
+    end
     puts sources_names
   end
 end

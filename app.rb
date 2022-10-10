@@ -1,5 +1,6 @@
 require_relative 'user_options'
 require_relative 'movie'
+require_relative 'music_album'
 
 class App
   def initialize
@@ -22,13 +23,13 @@ class App
     when '1'
       1
     when '2'
-      2
+      MusicAlbum.list_music_album(@things)
     when '3'
       Movie.list_movies(@things)
     when '4'
       4
     when '5'
-      5
+      Genre.list_genres(@things)
     when '6'
       6
     when '7'
@@ -38,7 +39,7 @@ class App
     when '9'
       9
     when '10'
-      10
+      @things << MusicAlbum.add_music_album
     when '11'
       @things << Movie.add_movie
     when '12'
