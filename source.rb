@@ -11,8 +11,12 @@ class Source
   end
 
   def self.list_sources(things)
+    sources_names = []
     things.each do |thing|
-      arr.push (thing.source)
+      sources_names << thing.source.name unless sources_names.include?(thing.source.name)
+    end
+    sources_names.each_with_index do |name, index|
+      puts "[#{index}] Source: #{name}"
     end
   end
 end

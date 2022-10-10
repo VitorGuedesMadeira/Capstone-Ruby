@@ -4,7 +4,6 @@ require_relative 'movie'
 class App
   def initialize
     @things = []
-    @sources = []
   end
 
   def run
@@ -35,25 +34,13 @@ class App
     when '7'
       7
     when '8'
-      Source.list_sources
+      Source.list_sources(@things)
     when '9'
       9
     when '10'
       10
     when '11'
-      new_movie = Movie.add_movie
-      @things << new_movie
-      flag =false
-      @sources.each do |source|
-        if source.name == new_movie.source.name
-          flag =true
-        end
-      end
-
-      if flag
-        @sources << new_movie.source
-      end
-      p @sources
+      @things << Movie.add_movie
     when '12'
       12
     else
