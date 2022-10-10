@@ -2,7 +2,9 @@
 
 # Catalog of my things (Ruby group capstone) 📚🎶🎞️👾
  
-> Catalog-of-my-things is a console app that displays all the owned items of a user. It uses json files to store data, allows the user to list "Books, Musics, Movies and Games" and add new items to it's catalog.
+> Catalog-of-my-things is a console app that displays all the owned items of a user. It uses json files to store data, allows the user to list "Books, Musics, Movies and Games" and add new items to it's catalog. The whole project is based on the UML diagram below:
+
+![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
 
 ## Built With
 
@@ -49,6 +51,20 @@ $ bundle install
 ```
 ```
 $ code .
+```
+
+### Run tests
+
+To install rspec, in the terminal kindly run this command
+
+```
+$ gem install rspec
+```
+
+To run tests, please run this command
+
+```
+$ rspec ./spec/#{filename}_spec.rb
 ```
 
 ### Usage
