@@ -1,6 +1,7 @@
 class Source
   attr_reader :name
-  def initialize (name, id= rand(0..1000))
+
+  def initialize(name, _id = rand(0..1000))
     @name = name
     @items = []
   end
@@ -10,9 +11,11 @@ class Source
     item.add_source(self)
   end
 
-  def self.list_sources(sources)
-    sources.each do |source|
-      puts source.name
+  def self.list_sources(things)
+    sources_names = []
+    things.each do |thing|
+      sources_names << thing.source.name unless sources_names.include?(thing.source.name)
     end
+    puts sources_names
   end
 end

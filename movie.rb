@@ -3,6 +3,7 @@ require_relative 'source'
 
 class Movie < Item
   attr_reader :silent
+
   def initialize(*args, silent)
     super(*args)
     @silent = silent
@@ -30,13 +31,13 @@ class Movie < Item
     print 'What is the source?'
     print "\nAnswer: "
     source_name = gets.chomp
-    
+
     new_movie = Movie.new(movie_date, silent_answer)
 
     new_source = Source.new(source_name)
     new_source.add_item(new_movie)
 
-    return new_movie
+    new_movie
   end
 
   private
