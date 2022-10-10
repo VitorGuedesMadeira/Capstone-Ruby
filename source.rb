@@ -10,9 +10,9 @@ class Source
     item.add_source(self)
   end
 
-  def self.list_sources(things)
-    things.each do |thing|
-      arr.push (thing.source)
+  def self.list_sources(sources)
+    sources.each do |source|
+      puts source.name
     end
   end
 end

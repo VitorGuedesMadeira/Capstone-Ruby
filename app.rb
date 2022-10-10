@@ -35,7 +35,7 @@ class App
     when '7'
       7
     when '8'
-      Source.list_sources
+      Source.list_sources(@sources)
     when '9'
       9
     when '10'
@@ -43,17 +43,18 @@ class App
     when '11'
       new_movie = Movie.add_movie
       @things << new_movie
-      flag =false
+
+      flag =true
       @sources.each do |source|
-        if source.name == new_movie.source.name
-          flag =true
+        if source.name.downcase == new_movie.source.name.downcase
+          flag = false
         end
       end
 
       if flag
         @sources << new_movie.source
       end
-      p @sources
+
     when '12'
       12
     else
