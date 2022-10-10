@@ -1,6 +1,14 @@
 require_relative 'user_options'
+require_relative 'movie'
 
 class App
+  def initialize
+    @books = []
+    @music_albums = []
+    @movies = []
+    @games = []
+  end
+
   def run
     puts "\nWelcome to my catalog!"
     keep_looping = true
@@ -19,7 +27,7 @@ class App
     when '2'
       2
     when '3'
-      3
+      Movie.list_movies(@movies)
     when '4'
       4
     when '5'
@@ -35,7 +43,7 @@ class App
     when '10'
       10
     when '11'
-      11
+      @movies << Movie.add_movie
     when '12'
       12
     else
