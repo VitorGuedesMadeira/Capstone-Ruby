@@ -19,5 +19,6 @@ class Source
     sources_names.each_with_index do |name, index|
       puts "[#{index}] Source: #{name}"
     end
+    puts sources_names
   end
 end
