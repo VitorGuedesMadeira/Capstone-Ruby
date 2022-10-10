@@ -3,10 +3,7 @@ require_relative 'movie'
 
 class App
   def initialize
-    @books = []
-    @music_albums = []
-    @movies = []
-    @games = []
+    @things = []
   end
 
   def run
@@ -27,7 +24,7 @@ class App
     when '2'
       2
     when '3'
-      Movie.list_movies(@movies)
+      Movie.list_movies(@things)
     when '4'
       4
     when '5'
@@ -37,13 +34,13 @@ class App
     when '7'
       7
     when '8'
-      8
+      Source.list_sources(@things)
     when '9'
       9
     when '10'
       10
     when '11'
-      @movies << Movie.add_movie
+      @things << Movie.add_movie
     when '12'
       12
     else

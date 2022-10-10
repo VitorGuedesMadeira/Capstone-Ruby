@@ -1,14 +1,17 @@
 require_relative 'item'
+require_relative 'source'
 
 class Movie < Item
+  attr_reader :silent
+
   def initialize(*args, silent)
     super(*args)
     @silent = silent
   end
 
-  def self.list_movies(movies)
-    movies.each do |movie|
-      puts "\nThe movie published date is: #{movie.publish_date}"
+  def self.list_movies(things)
+    things.each do |thing|
+      puts "\nThe movie published date is: #{thing.publish_date}" if thing.instance_of? Movie
     end
   end
 
@@ -25,7 +28,16 @@ class Movie < Item
                     else
                       false
                     end
-    Movie.new(movie_date, silent_answer)
+    print 'What is the source?'
+    print "\nAnswer: "
+    source_name = gets.chomp
+
+    new_movie = Movie.new(movie_date, silent_answer)
+
+    new_source = Source.new(source_name)
+    new_source.add_item(new_movie)
+
+    new_movie
   end
 
   private
