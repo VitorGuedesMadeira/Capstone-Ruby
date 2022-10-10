@@ -1,28 +1,25 @@
 class Item
   attr_reader :genre, :author, :source, :label, :publish_date
-  def initialize(id = rand(1..1000), publish_date)
+
+  def initialize(publish_date, id = rand(1..1000))
     @id = id
-    @genre
-    @author
-    @source
-    @label
     @publish_date = publish_date
     @archived = false
   end
 
-  def set_genre(genre)
+  def add_genre(genre)
     @genre = genre
   end
 
-  def set_author(author)
+  def add_author(author)
     @author = author
   end
 
-  def set_source(source)
+  def add_source(source)
     @source = source
   end
 
-  def set_label(label)
+  def add_label(label)
     @label = label
   end
 
@@ -36,8 +33,3 @@ class Item
     Time.new.year - publish_date > 10
   end
 end
-
-
-test = Item.new(2010)
-test.move_to_archive
-p test
