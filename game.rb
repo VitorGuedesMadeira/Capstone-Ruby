@@ -32,7 +32,6 @@ class Game < Item
     print 'When was the game last played?'
     print "\nAnswer: "
     last_played = gets.chomp.to_i
-    
 
     new_game = Game.new(game_date, multiplayer_answer, last_played)
 
@@ -44,7 +43,7 @@ class Game < Item
     print "\nAnswer: "
     author_last_name = gets.chomp
     new_author = Author.new(author_first_name, author_last_name)
-    new_author.add_item(new_game)                   
+    new_author.add_item(new_game)
 
     new_game
   end
