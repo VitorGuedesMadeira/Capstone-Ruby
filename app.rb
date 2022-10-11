@@ -35,7 +35,7 @@ class App
     when '6'
       6
     when '7'
-      7
+      Author.list_authors(@things)
     when '8'
       Source.list_sources(@things)
     when '9'

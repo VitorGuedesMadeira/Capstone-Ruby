@@ -1,4 +1,5 @@
 require_relative 'item'
+require_relative 'author'
 
 class Game < Item
   attr_reader :multiplayer, :last_played_at
@@ -31,14 +32,19 @@ class Game < Item
     print 'When was the game last played?'
     print "\nAnswer: "
     last_played = gets.chomp.to_i
-    print 'What is the source?'
-    print "\nAnswer: "
-    source_name = gets.chomp
 
     new_game = Game.new(game_date, multiplayer_answer, last_played)
 
-    new_source = Source.new(source_name)
-    new_source.add_item(new_game)
+    print 'Author\'s first name?'
+    print "\nAnswer: "
+    author_first_name = gets.chomp
+
+    print 'Author\'s last name?'
+    print "\nAnswer: "
+    author_last_name = gets.chomp
+    new_author = Author.new(author_first_name, author_last_name)
+    new_author.add_item(new_game)
+
     new_game
   end
 
