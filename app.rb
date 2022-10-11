@@ -9,7 +9,6 @@ class App
   end
 
   def run
-    p @things
     puts "\nWelcome to my catalog!"
     keep_looping = true
     while keep_looping
@@ -47,8 +46,8 @@ class App
     when '12'
       12
     else
+      p @things
       SaveFiles.write_music_albums(@things)
-      SaveFiles.write_genres(@things)
       exit
     end
   end

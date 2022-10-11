@@ -1,12 +1,20 @@
 [
   {
     "publish_date": 2022,
-    "id": 346,
-    "on_spotify": true
+    "id": 534,
+    "on_spotify": true,
+    "genre": {
+      "name": "YouTube",
+      "id": 871
+    }
   },
   {
-    "publish_date": 2020,
-    "id": 202,
-    "on_spotify": true
+    "publish_date": 2000,
+    "id": 369,
+    "on_spotify": false,
+    "genre": {
+      "name": "Spotify",
+      "id": 596
+    }
   }
 ]
