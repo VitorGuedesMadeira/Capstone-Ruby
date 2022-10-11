@@ -46,7 +46,6 @@ class App
     when '12'
       12
     else
-      p @things
       SaveFiles.write_music_albums(@things)
       exit
     end
