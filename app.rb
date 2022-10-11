@@ -1,10 +1,11 @@
 require_relative 'user_options'
 require_relative 'movie'
 require_relative 'music_album'
+require_relative 'save_files'
 
 class App
   def initialize
-    @things = []
+    @things = SaveFiles.read_files
   end
 
   def run
@@ -45,6 +46,7 @@ class App
     when '12'
       12
     else
+      SaveFiles.write_music_albums(@things)
       exit
     end
   end

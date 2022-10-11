@@ -2,6 +2,7 @@ require_relative 'item'
 require_relative 'genre'
 
 class MusicAlbum < Item
+  attr_accessor :id
   attr_reader :on_spotify
 
   def initialize(*args, on_spotify)
