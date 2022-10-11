@@ -1,6 +1,8 @@
 require 'json'
 require_relative 'music_album'
 require_relative 'genre'
+require_relative 'source'
+require_relative 'movie'
 
 class SaveFiles
   # write_MusicAlbums
@@ -45,7 +47,42 @@ class SaveFiles
   # read_Books
 
   # write_Movies
-  # read_Movies
+  def self.write_movies(things)
+    movies_data_array = []
+    things.each do |thing|
+      next unless thing.instance_of?(Movie)
+
+      movies_data_array << {
+        publish_date: thing.publish_date,
+        id: thing.id,
+        silent: thing.silent,
+        source: {
+          name: thing.source.name,
+          id: thing.source.id
+        }
+      }
+    end
+    File.write('./data/movies.json', JSON.pretty_generate(movies_data_array))
+  end
+
+  # read_movies
+  def self.read_movies
+    array_movies = []
+    return array_movies unless File.exist?('./data/movies.json')
+
+    movies_file = File.open('./data/movies.json')
+    data = JSON.parse(movies_file.read)
+    data.each do |movie|
+      new_movie = Movie.new(movie['publish_date'], movie['silent'])
+      new_movie.id = movie['id']
+      new_source = Source.new(movie['source']['name'])
+      new_source.id = movie['source']['id']
+      new_source.add_item(new_movie)
+      array_movies << new_movie
+    end
+    movies_file.close
+    array_movies
+  end
 
   # write_Games
   # read_Games13
@@ -54,6 +91,12 @@ class SaveFiles
   def self.read_files
     things = []
     things.concat read_music_albums
+    things.concat read_movies
     things
+  end
+
+  def self.write_things(things)
+    write_movies(things)
+    write_music_albums(things)
   end
 end

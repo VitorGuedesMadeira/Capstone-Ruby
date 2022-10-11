@@ -1,9 +1,11 @@
 class Source
+  attr_accessor :id
   attr_reader :name, :items
 
-  def initialize(name, _id = rand(0..1000))
+  def initialize(name)
     @name = name
     @items = []
+    @id = Random.rand(1..1000)
   end
 
   def add_item(item)
@@ -14,7 +16,7 @@ class Source
   def self.list_sources(things)
     sources_names = []
     things.each do |thing|
-      sources_names << thing.source.name unless sources_names.include?(thing.source.name)
+      sources_names << thing.source.name if thing.instance_of?(Movie) && !sources_names.include?(thing.source.name)
     end
     sources_names.each_with_index do |name, index|
       puts "[#{index}] Source: #{name}"
