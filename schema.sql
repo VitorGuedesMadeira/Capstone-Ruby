@@ -33,7 +33,8 @@ CREATE TABLE music_albums(
 -- authors
 CREATE TABLE authors(
     id INT GENERATED ALWAYS AS IDENTITY,
-    name VARCHAR(50),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
     PRIMARY KEY(id)
 );
 -- games
@@ -42,7 +43,7 @@ CREATE TABLE games(
     publish_date DATE NOT NULL,
     archived BOOLEAN,
     multiplayer BOOLEAN,
-    last_played_at DATE NOT NULL
+    last_played_at DATE NOT NULL,
     games_id INT,
     PRIMARY KEY(id),
     CONSTRAINT fk_authors FOREIGN KEY(games_id) REFERENCES authors(id)
