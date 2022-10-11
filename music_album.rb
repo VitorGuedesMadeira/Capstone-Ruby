@@ -2,6 +2,7 @@ require_relative 'item'
 require_relative 'genre'
 
 class MusicAlbum < Item
+  attr_accessor :id
   attr_reader :on_spotify
 
   def initialize(*args, on_spotify)
@@ -21,7 +22,7 @@ class MusicAlbum < Item
     print "\nType a publish date [year]: "
     print "\nAnswer: "
     music_album_date = gets.chomp.to_i
-    print "\nIs this Music Album on Spotify? [y/n]"
+    print 'Is this Music Album on Spotify? [y/n]'
     print "\nAnswer: "
     spotify = gets.chomp
     is_on_spotify = case spotify.downcase
