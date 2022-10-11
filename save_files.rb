@@ -72,7 +72,7 @@ class SaveFiles
     movies_file = File.open('./data/movies.json')
     data = JSON.parse(movies_file.read)
     data.each do |movie|
-      new_movie = MusicAlbum.new(movie['publish_date'], movie['silent'])
+      new_movie = Movie.new(movie['publish_date'], movie['silent'])
       new_movie.id = movie['id']
       new_source = Source.new(movie['source']['name'])
       new_source.id = movie['source']['id']
@@ -92,5 +92,10 @@ class SaveFiles
     things.concat read_music_albums
     things.concat read_movies
     things
+  end
+
+  def self.write_things(things)
+    write_movies(things)
+    write_music_albums(things)
   end
 end

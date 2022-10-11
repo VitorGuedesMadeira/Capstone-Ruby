@@ -47,8 +47,7 @@ class App
     when '12'
       @things << Game.add_game
     else
-      SaveFiles.write_music_albums(@things)
-      SaveFiles.write_movies(@things)
+      SaveFiles.write_things(@things)
       exit
     end
   end

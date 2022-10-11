@@ -1,11 +1,11 @@
 [
   {
-    "publish_date": 2022,
-    "id": 898,
-    "on_spotify": true,
+    "publish_date": 1300,
+    "id": 604,
+    "on_spotify": false,
     "genre": {
-      "name": "YouTube",
-      "id": 378
+      "name": "rock",
+      "id": 468
     }
   }
 ]
