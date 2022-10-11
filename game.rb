@@ -2,6 +2,7 @@ require_relative 'item'
 
 class Game < Item
   attr_reader :multiplayer, :last_played_at
+
   def initialize(*args, multiplayer, last_played_at)
     super(*args)
     @multiplayer = multiplayer
@@ -22,11 +23,11 @@ class Game < Item
     print "\nAnswer: "
     game_multiplayer = gets.chomp
     multiplayer_answer = case game_multiplayer.downcase
-                    when 'y'
-                      true
-                    else
-                      false
-                    end
+                         when 'y'
+                           true
+                         else
+                           false
+                         end
     print 'When was the game last played?'
     print "\nAnswer: "
     last_played = gets.chomp.to_i
@@ -42,9 +43,9 @@ class Game < Item
   end
 
   private
-  
+
   def can_be_archived?
-    super && Time.new.year-last_played_at > 2
+    super && Time.new.year - last_played_at > 2
   end
 end
 
