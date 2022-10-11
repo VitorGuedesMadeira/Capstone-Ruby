@@ -46,7 +46,7 @@ class SaveFiles
   def self.write_genres(things)
     genres_data_array = []
     things.each do |thing|
-      if thing.instance_of?(MusicAlbum)
+      if thing.instance_of?(Genre)
         genres_data_array << {
           name: thing.genre.name,
           id: thing.genre.id
@@ -56,6 +56,20 @@ class SaveFiles
     File.write('./data/genres.json', JSON.pretty_generate(genres_data_array))
   end
   #read_genres
+  def self.read_genres
+    array_genres = []
+    return array_genres unless File.exist?('./data/genres.json')
+
+    genres_file = File.open('./data/genres.json')
+    data = JSON.parse(genres_file.read)
+    data.each do |genre|
+      new_genre = Genre.new(genre['name'])
+      new_genre.id = genre['id']
+      array_genres << new_genre
+    end
+    genres_file.close
+    array_genres
+  end
 
   #write_authors
   #read_authors
@@ -65,4 +79,10 @@ class SaveFiles
 
   #write_labels
   #read_labels
+
+  def self.read_files
+    things = []
+    things.concat read_music_albums
+    return things
+  end
 end

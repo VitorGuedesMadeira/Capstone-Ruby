@@ -5,12 +5,11 @@ require_relative 'save_files'
 
 class App
   def initialize
-    @things = []
+    @things = SaveFiles.read_files
   end
 
   def run
     p @things
-    SaveFiles
     puts "\nWelcome to my catalog!"
     keep_looping = true
     while keep_looping
