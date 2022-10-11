@@ -19,4 +19,10 @@ describe Genre do
       expect(@new_genre.items.length).not_to eql 2
     end
   end
+
+  describe 'Genre#name getter' do
+    it 'The Genre class getter should return "rock"' do
+      expect(@new_genre.name).to eql "rock"
+    end
+  end
 end
