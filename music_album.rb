@@ -31,7 +31,7 @@ class MusicAlbum < Item
                     else
                       false
                     end
-    print 'What is the source?'
+    print 'What is the genre?'
     print "\nAnswer: "
     genre_name = gets.chomp
 
