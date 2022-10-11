@@ -10,7 +10,13 @@ describe Genre do
 
   describe 'Genre#add_item method' do
     it 'The Genre class method should return 1' do
-      expect(@music_album.items.length).to eql 1
+      expect(@new_genre.items.length).to eql 1
+    end
+  end
+
+  describe 'Genre#add_item method' do
+    it 'The Genre class method should NOT return 2' do
+      expect(@new_genre.items.length).not_to eql 2
     end
   end
 end
