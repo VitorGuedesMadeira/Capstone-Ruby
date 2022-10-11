@@ -2,6 +2,7 @@ require_relative 'item'
 require_relative 'source'
 
 class Movie < Item
+  attr_accessor :id
   attr_reader :silent
 
   def initialize(*args, silent)

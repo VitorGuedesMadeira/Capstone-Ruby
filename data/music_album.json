@@ -1,29 +1,11 @@
 [
   {
     "publish_date": 2022,
-    "id": 534,
+    "id": 898,
     "on_spotify": true,
     "genre": {
       "name": "YouTube",
-      "id": 871
-    }
-  },
-  {
-    "publish_date": 2000,
-    "id": 369,
-    "on_spotify": false,
-    "genre": {
-      "name": "Spotify",
-      "id": 596
-    }
-  },
-  {
-    "publish_date": 2020,
-    "id": 48,
-    "on_spotify": true,
-    "genre": {
-      "name": "diego",
-      "id": 639
+      "id": 378
     }
   }
 ]
