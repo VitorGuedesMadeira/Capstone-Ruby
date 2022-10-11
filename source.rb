@@ -1,5 +1,5 @@
 class Source
-  attr_reader :name
+  attr_reader :name, :items
 
   def initialize(name, _id = rand(0..1000))
     @name = name
