@@ -1,6 +1,7 @@
 require_relative 'user_options'
 require_relative 'movie'
 require_relative 'music_album'
+require_relative 'game'
 require_relative 'save_files'
 
 class App
@@ -28,7 +29,7 @@ class App
     when '3'
       Movie.list_movies(@things)
     when '4'
-      4
+      Game.list_games(@things)
     when '5'
       Genre.list_genres(@things)
     when '6'
@@ -44,7 +45,7 @@ class App
     when '11'
       @things << Movie.add_movie
     when '12'
-      12
+      @things << Game.add_game
     else
       SaveFiles.write_music_albums(@things)
       exit
