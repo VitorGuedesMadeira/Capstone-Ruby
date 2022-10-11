@@ -64,6 +64,7 @@ class SaveFiles
     end
     File.write('./data/movies.json', JSON.pretty_generate(movies_data_array))
   end
+
   # read_movies
   def self.read_movies
     array_movies = []
