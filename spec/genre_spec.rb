@@ -22,7 +22,7 @@ describe Genre do
 
   describe 'Genre#name getter' do
     it 'The Genre class getter should return "rock"' do
-      expect(@new_genre.name).to eql "rock"
+      expect(@new_genre.name).to eql 'rock'
     end
   end
 end
