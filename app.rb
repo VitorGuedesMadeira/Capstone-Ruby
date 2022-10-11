@@ -1,6 +1,7 @@
 require_relative 'user_options'
 require_relative 'movie'
 require_relative 'music_album'
+require_relative 'save_files'
 
 class App
   def initialize
@@ -8,6 +9,8 @@ class App
   end
 
   def run
+    p @things
+    SaveFiles
     puts "\nWelcome to my catalog!"
     keep_looping = true
     while keep_looping
@@ -45,6 +48,8 @@ class App
     when '12'
       12
     else
+      SaveFiles.write_music_albums(@things)
+      SaveFiles.write_genres(@things)
       exit
     end
   end
