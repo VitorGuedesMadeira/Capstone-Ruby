@@ -21,7 +21,7 @@ class MusicAlbum < Item
     print "\nType a publish date [year]: "
     print "\nAnswer: "
     music_album_date = gets.chomp.to_i
-    print "Is this Music Album on Spotify? [y/n]"
+    print 'Is this Music Album on Spotify? [y/n]'
     print "\nAnswer: "
     spotify = gets.chomp
     is_on_spotify = case spotify.downcase
