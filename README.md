@@ -4,7 +4,7 @@
  
 > Catalog-of-my-things is a console app that displays all the owned items of a user. It uses json files to store data, allows the user to list "Books, Musics, Movies and Games" and add new items to it's catalog. The whole project is based on the UML diagram below:
 
-![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
+![catalog_of_my_things](./readmefileimage.png)
 
 ## Built With
 
@@ -107,3 +107,7 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
+## UML Diagram
+
+![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
