@@ -85,18 +85,57 @@ class SaveFiles
   end
 
   # write_Games
+  def self.write_games(things)
+    games_data_array = []
+    things.each do |thing|
+      next unless thing.instance_of?(Game)
+
+      games_data_array << {
+        publish_date: thing.publish_date,
+        id: thing.id,
+        multiplayer: thing.multiplayer,
+        last_played_at: thing.last_played_at,
+        author: {
+          first_name: thing.author.first_name,
+          last_name: thing.author.last_name,
+          id: thing.author.id
+        }
+      }
+    end
+    File.write('./data/games.json', JSON.pretty_generate(games_data_array))
+  end
+
   # read_Games13
+  def self.read_games
+    array_games = []
+    return array_games unless File.exist?('./data/games.json')
+
+    games_file = File.open('./data/games.json')
+    data = JSON.parse(games_file.read)
+    data.each do |game|
+      new_game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
+      new_game.id = game['id']
+      new_author = Author.new(game['author']['first_name'], game['author']['last_name'])
+      new_author.id = game['author']['id']
+      new_author.add_item(new_game)
+      array_games << new_game
+    end
+    games_file.close
+    array_games
+  end
 
   # read ALL files
   def self.read_files
     things = []
     things.concat read_music_albums
     things.concat read_movies
+    things.concat read_games
     things
   end
 
   def self.write_things(things)
     write_movies(things)
     write_music_albums(things)
+    write_games(things)
   end
 end
