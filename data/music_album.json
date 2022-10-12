@@ -7,5 +7,14 @@
       "name": "rock",
       "id": 468
     }
+  },
+  {
+    "publish_date": 2020,
+    "id": 775,
+    "on_spotify": true,
+    "genre": {
+      "name": "samba",
+      "id": 768
+    }
   }
 ]

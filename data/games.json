@@ -9,5 +9,16 @@
       "last_name": "studios",
       "id": 58
     }
+  },
+  {
+    "publish_date": 2022,
+    "id": 318,
+    "multiplayer": true,
+    "last_played_at": 2020,
+    "author": {
+      "first_name": "Diego",
+      "last_name": "Yon",
+      "id": 361
+    }
   }
 ]
