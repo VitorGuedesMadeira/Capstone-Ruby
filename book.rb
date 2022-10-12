@@ -29,7 +29,7 @@ class Book < Item
     author_last_name = gets.chomp
     print "\nType the Name of the publisher: "
     publisher = gets.chomp
-    print "Type publishing date [year]: "
+    print 'Type publishing date [year]: '
     book_date = gets.chomp.to_i
     print "\nType the color of the Book: "
     book_color = gets.chomp
