@@ -1,6 +1,7 @@
 require_relative 'item'
 require_relative 'source'
 require_relative 'author'
+require_relative 'label'
 
 class Book < Item
   attr_accessor :cover_state, :publisher
@@ -37,11 +38,17 @@ class Book < Item
     print "\nAnswer: "
     book_date = gets.chomp.to_i
 
+    print "\nType the color of the Book: "
+    print "\nAnswer: "
+    book_color = gets.chomp
+
     new_book = Book.new(book_date, cover_state, publisher)
     puts "The book '#{cover_state.upcase}' by #{publisher.upcase} was created successfully!"
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_book)
 
+    new_label = Label.new(cover_state, book_color)
+    new_label.add_item(new_book)
     new_book
   end
 
