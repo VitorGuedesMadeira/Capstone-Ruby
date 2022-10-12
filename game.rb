@@ -28,7 +28,7 @@ class Game < Item
     genre_name = gets.chomp
     print 'Enter the source of this game: '
     source_name = gets.chomp
-    #item inputs
+    # item inputs
     print "\nWhat's the publish date? [year] "
     print "\nAnswer: "
     game_date = gets.chomp.to_i

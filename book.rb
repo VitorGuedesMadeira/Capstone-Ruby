@@ -4,8 +4,7 @@ require_relative 'author'
 require_relative 'label'
 
 class Book < Item
-  attr_accessor :id
-  attr_accessor :cover_state, :publisher
+  attr_accessor :id, :cover_state, :publisher
 
   def initialize(*args, cover_state, publisher)
     super(*args)
@@ -24,7 +23,7 @@ class Book < Item
   def self.add_book
     print 'Enter Title of the Book: '
     label_title = gets.chomp
-    print "Type the color of the Book: "
+    print 'Type the color of the Book: '
     label_color = gets.chomp
     print 'Author\'s first name: '
     author_first_name = gets.chomp
@@ -34,7 +33,7 @@ class Book < Item
     genre_name = gets.chomp
     print 'Enter the source of this book: '
     source_name = gets.chomp
-    #item inputs
+    # item inputs
     print "\nWhat's the name of the publisher?"
     print "\nAnswer: "
     publisher = gets.chomp

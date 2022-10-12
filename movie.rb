@@ -27,7 +27,7 @@ class Movie < Item
     genre_name = gets.chomp
     print 'Enter the source of the movie: '
     source_name = gets.chomp
-    #item inputs
+    # item inputs
     print "\nWhat's the publish date? [year] "
     print "\nAnswer: "
     movie_date = gets.chomp.to_i

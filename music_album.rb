@@ -27,7 +27,7 @@ class MusicAlbum < Item
     genre_name = gets.chomp
     print 'Enter the source of this music album: '
     source_name = gets.chomp
-    #item inputs
+    # item inputs
     print "\nWhat's the publish date? [year] "
     print "\nAnswer: "
     music_album_date = gets.chomp.to_i

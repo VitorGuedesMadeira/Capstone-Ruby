@@ -50,23 +50,23 @@ class SaveFiles
     data.each do |music_album|
       new_music_album = MusicAlbum.new(music_album['publish_date'], music_album['on_spotify'])
       new_music_album.id = music_album['id']
-      #genre
+      # genre
       new_genre = Genre.new(music_album['genre']['name'])
       new_genre.id = music_album['genre']['id']
       new_genre.add_item(new_music_album)
-      #source
+      # source
       new_source = Source.new(music_album['source']['name'])
       new_source.id = music_album['source']['id']
       new_source.add_item(new_music_album)
-      #label
+      # label
       new_label = Label.new(music_album['label']['title'], music_album['label']['color'])
       new_label.id = music_album['label']['id']
       new_label.add_item(new_music_album)
-      #author
+      # author
       new_author = Author.new(music_album['author']['first_name'], music_album['author']['last_name'])
       new_author.id = music_album['author']['id']
       new_author.add_item(new_music_album)
-      #returning
+      # returning
       array_music_albums << new_music_album
     end
     music_album_file.close
@@ -119,23 +119,23 @@ class SaveFiles
     data.each do |movie|
       new_movie = Movie.new(movie['publish_date'], movie['silent'])
       new_movie.id = movie['id']
-      #source
+      # source
       new_source = Source.new(movie['source']['name'])
       new_source.id = movie['source']['id']
       new_source.add_item(new_movie)
-      #label
+      # label
       new_label = Label.new(movie['label']['title'], movie['label']['color'])
       new_label.id = movie['label']['id']
       new_label.add_item(new_movie)
-      #author
+      # author
       new_author = Author.new(movie['author']['first_name'], movie['author']['last_name'])
       new_author.id = movie['author']['id']
       new_author.add_item(new_movie)
-      #genre
+      # genre
       new_genre = Genre.new(movie['genre']['name'])
       new_genre.id = movie['genre']['id']
       new_genre.add_item(new_movie)
-      #returning
+      # returning
       array_movies << new_movie
     end
     movies_file.close
@@ -186,23 +186,23 @@ class SaveFiles
     data.each do |game|
       new_game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'])
       new_game.id = game['id']
-      #author
+      # author
       new_author = Author.new(game['author']['first_name'], game['author']['last_name'])
       new_author.id = game['author']['id']
       new_author.add_item(new_game)
-      #label
+      # label
       new_label = Label.new(game['label']['title'], game['label']['color'])
       new_label.id = game['label']['id']
       new_label.add_item(new_game)
-      #genre
+      # genre
       new_genre = Genre.new(game['genre']['name'])
       new_genre.id = game['genre']['id']
       new_genre.add_item(new_game)
-      #source
+      # source
       new_source = Source.new(game['source']['name'])
       new_source.id = game['source']['id']
       new_source.add_item(new_game)
-      #returning
+      # returning
       array_games << new_game
     end
     games_file.close
@@ -253,23 +253,23 @@ class SaveFiles
     data.each do |book|
       new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
       new_book.id = book['id']
-      #label
+      # label
       new_label = Label.new(book['label']['title'], book['label']['color'])
       new_label.id = book['label']['id']
       new_label.add_item(new_book)
-      #author
+      # author
       new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
       new_author.id = book['author']['id']
       new_author.add_item(new_book)
-      #genre
+      # genre
       new_genre = Genre.new(book['genre']['name'])
       new_genre.id = book['genre']['id']
       new_genre.add_item(new_book)
-      #source
+      # source
       new_source = Source.new(book['source']['name'])
       new_source.id = book['source']['id']
       new_source.add_item(new_book)
-      #returning
+      # returning
       array_books << new_book
     end
     books_file.close
