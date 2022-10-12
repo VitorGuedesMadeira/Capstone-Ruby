@@ -17,10 +17,12 @@ class Author
   def self.list_authors(things)
     authors = []
     things.each do |thing|
-      authors << [thing.author.first_name, thing.author.last_name] if thing.instance_of?(Game) && !authors.include?([thing.author.first_name,
-        thing.author.last_name])
+      next unless thing.instance_of?(Game) && !authors.include?([thing.author.first_name,
+                                                                 thing.author.last_name])
 
-                                                                                          end
+      authors << [thing.author.first_name,
+                  thing.author.last_name]
+    end
     authors.each_with_index do |author, index|
       puts "[#{index}] Author: #{author[0]} #{author[1]}"
     end
