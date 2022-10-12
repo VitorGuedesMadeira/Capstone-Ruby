@@ -6,7 +6,7 @@ require_relative 'label'
 class Book < Item
   attr_accessor :cover_state, :publisher
 
-  def initialize(*args, publisher, cover_state)
+  def initialize(*args, cover_state, publisher)
     super(*args)
     @publisher = publisher
     @cover_state = cover_state
