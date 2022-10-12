@@ -48,7 +48,20 @@ CREATE TABLE games(
     PRIMARY KEY(id),
     CONSTRAINT fk_authors FOREIGN KEY(games_id) REFERENCES authors(id)
 );
+-- Books
+CREATE TABLE books(
+    id INT GENERATED ALWAYS AS IDENTITY,
+    publish_date DATE NOT NULL,
+    archived BOOLEAN,
+    cover_state VARCHAR(150),
+    publisher VARCHAR(150),
+    book_color VARCHAR(50),
+    games_id INT,
+    PRIMARY KEY(id),
+    CONSTRAINT fk_authors FOREIGN KEY(books_id) REFERENCES authors(id)
+);
 -- generating indexes for performance
 CREATE INDEX movie_source_idx ON movies(sources_id);
 CREATE INDEX music_genre_idx ON music_albums(genres_id);
 CREATE INDEX game_author_idx ON games(authors_id);
+CREATE INDEX book_author_idx ON books(authors_id);
