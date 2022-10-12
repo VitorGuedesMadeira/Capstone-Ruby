@@ -12,7 +12,7 @@ class Movie < Item
 
   def self.list_movies(things)
     things.each_with_index do |thing, index|
-      puts "[#{index}] The movie published date is: #{thing.publish_date}" if thing.instance_of? Movie
+      puts "[#{index}] The movie #{thing.label.title}, genre #{thing.genre.name} was published date on #{thing.publish_date}" if thing.instance_of? Movie
     end
   end
 

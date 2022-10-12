@@ -13,7 +13,7 @@ class Game < Item
 
   def self.list_games(things)
     things.each_with_index do |thing, index|
-      puts "[#{index}] The game published date is: #{thing.publish_date}" if thing.instance_of? Game
+      puts "[#{index}] The game: #{thing.label.title} by #{thing.author.first_name} #{thing.author.last_name} has been published on #{thing.publish_date}" if thing.instance_of? Game
     end
   end
 

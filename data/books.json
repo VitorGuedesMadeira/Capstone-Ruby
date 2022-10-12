@@ -46,5 +46,29 @@
       "name": "Amazon",
       "id": 832
     }
+  },
+  {
+    "publish_date": 2001,
+    "cover_state": "good",
+    "publisher": "J.K.Rowling",
+    "id": 186,
+    "label": {
+      "title": "Harry Potter",
+      "id": 718,
+      "color": "Black"
+    },
+    "author": {
+      "first_name": "J.K.",
+      "last_name": "Rowling",
+      "id": 889
+    },
+    "genre": {
+      "name": "Fantasy",
+      "id": 335
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 484
+    }
   }
 ]
