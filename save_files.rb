@@ -3,6 +3,8 @@ require_relative 'music_album'
 require_relative 'genre'
 require_relative 'source'
 require_relative 'movie'
+require_relative 'book'
+require_relative 'label'
 
 class SaveFiles
   # write_MusicAlbums
@@ -124,12 +126,59 @@ class SaveFiles
     array_games
   end
 
+   # read_Books
+   def self.read_books
+    array_books = []
+    return array_books unless File.exist?('./data/books.json')
+
+    books_file = File.open('./data/books.json')
+    data = JSON.parse(books_file.read)
+    data.each do |book|
+      new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
+      
+      new_label = Label.new(new_book['cover_state']['title'], new_book['book_color'])
+      new_label.id = new_book['cover_state']['id']
+      new_label.add_item(new_book)
+
+      
+      new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
+      new_author.id = book['author']['id']
+      new_author.add_item(new_book)
+      array_books << new_book
+    end
+    books_file.close
+    array_books
+  end
+
+  # write_Books
+  def self.write_books(things)
+    books_data_array = []
+    things.each do |thing|
+      next unless thing.instance_of?(Book)
+
+      books_data_array << {
+        publish_date: thing.publish_date,
+        id: thing.id,
+        cover_state: thing.cover_state,
+        publisher: thing.publisher,
+        # book_color: label.thing.book_color,
+        author: {
+          first_name: thing.author.first_name,
+          last_name: thing.author.last_name,
+          id: thing.author.id
+        }
+      }
+    end
+    File.write('./data/books.json', JSON.pretty_generate(books_data_array))
+  end
+
   # read ALL files
   def self.read_files
     things = []
     things.concat read_music_albums
     things.concat read_movies
     things.concat read_games
+    things.concat read_books
     things
   end
 
@@ -137,5 +186,6 @@ class SaveFiles
     write_movies(things)
     write_music_albums(things)
     write_games(things)
+    write_books(things)
   end
 end
