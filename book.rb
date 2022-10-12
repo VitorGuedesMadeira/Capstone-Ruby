@@ -49,7 +49,6 @@ class Book < Item
 
     new_label = Label.new(cover_state, book_color)
     new_label.add_item(new_book)
-
     new_book
   end
 

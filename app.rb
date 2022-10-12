@@ -48,9 +48,11 @@ class App
       @things << Movie.add_movie
     when '12'
       @things << Game.add_game
-    else
+    when '13'
       SaveFiles.write_things(@things)
       exit
+    else
+      puts 'Please insert a valid number!'
     end
   end
 end
