@@ -44,11 +44,9 @@ class Book < Item
     new_book
   end
 
+  private
+
   def can_be_archived?
-    if super || @cover_state == 'bad'
-      true
-    else
-      false
-    end
+    super || @cover_state == 'bad'
   end
 end
