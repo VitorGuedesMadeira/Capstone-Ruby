@@ -1,16 +1,16 @@
 [
   {
     "publish_date": 2022,
-    "cover_state": "d",
-    "publisher": "c",
+    "cover_state": "c",
+    "publisher": "d",
     "label": {
-      "id": 365,
-      "color": "e"
+      "id": 633,
+      "color": null
     },
     "author": {
       "first_name": "a",
       "last_name": "b",
-      "id": 285
+      "id": 149
     }
   }
 ]
