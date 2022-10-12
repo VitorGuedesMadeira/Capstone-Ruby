@@ -12,9 +12,7 @@ class MusicAlbum < Item
 
   def self.list_music_album(things)
     things.each_with_index do |thing, index|
-      if thing.instance_of? MusicAlbum
-        puts "[#{index}] The music album published date is: #{thing.publish_date}, spotify: #{thing.on_spotify}"
-      end
+      puts "[#{index}] The music album published date is: #{thing.publish_date}, spotify: #{thing.on_spotify}" if thing.instance_of? MusicAlbum
     end
   end
 
