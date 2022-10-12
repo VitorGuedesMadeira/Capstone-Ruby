@@ -1,0 +1,16 @@
+[
+  {
+    "publish_date": 2022,
+    "cover_state": "Lord of the Rings",
+    "publisher": "Wilsons",
+    "label": {
+      "id": 699,
+      "color": null
+    },
+    "author": {
+      "first_name": "Jhon",
+      "last_name": "Walker",
+      "id": 986
+    }
+  }
+]

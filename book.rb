@@ -6,7 +6,7 @@ require_relative 'label'
 class Book < Item
   attr_accessor :cover_state, :publisher
 
-  def initialize(*args, publisher, cover_state)
+  def initialize(*args, cover_state, publisher)
     super(*args)
     @publisher = publisher
     @cover_state = cover_state
@@ -21,25 +21,17 @@ class Book < Item
   end
 
   def self.add_book
-    print 'Author\'s first name?'
-    print "\nAnswer: "
-    author_first_name = gets.chomp
-
-    print 'Author\'s last name?'
-    print "\nAnswer: "
-    author_last_name = gets.chomp
-
     print "\nType a Cover State of the Book: "
     cover_state = gets.chomp
+    print 'Author\'s first name?: '
+    author_first_name = gets.chomp
+    print 'Author\'s last name?: '
+    author_last_name = gets.chomp
     print "\nType the Name of the publisher: "
     publisher = gets.chomp
-
-    print "\nType a publish date [year]: "
-    print "\nAnswer: "
+    print 'Type publishing date [year]: '
     book_date = gets.chomp.to_i
-
     print "\nType the color of the Book: "
-    print "\nAnswer: "
     book_color = gets.chomp
 
     new_book = Book.new(book_date, cover_state, publisher)
