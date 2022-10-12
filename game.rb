@@ -2,6 +2,7 @@ require_relative 'item'
 require_relative 'author'
 
 class Game < Item
+  attr_accessor :id
   attr_reader :multiplayer, :last_played_at
 
   def initialize(*args, multiplayer, last_played_at)

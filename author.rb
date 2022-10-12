@@ -1,9 +1,11 @@
 class Author
+  attr_accessor :id
   attr_reader :first_name, :last_name, :items
 
-  def initialize(first_name, last_name, _id = rand(1..1000))
+  def initialize(first_name, last_name)
     @first_name = first_name
     @last_name = last_name
+    @id = rand(1..1000)
     @items = []
   end
 
@@ -15,9 +17,10 @@ class Author
   def self.list_authors(things)
     authors = []
     things.each do |thing|
-      authors << [thing.author.first_name, thing.author.last_name] unless authors.include?([thing.author.first_name,
-                                                                                            thing.author.last_name])
-    end
+      authors << [thing.author.first_name, thing.author.last_name] if thing.instance_of?(Game) && !authors.include?([thing.author.first_name,
+        thing.author.last_name])
+
+                                                                                          end
     authors.each_with_index do |author, index|
       puts "[#{index}] Author: #{author[0]} #{author[1]}"
     end
