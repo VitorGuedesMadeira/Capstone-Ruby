@@ -3,7 +3,6 @@ require_relative 'movie'
 require_relative 'music_album'
 require_relative 'game'
 require_relative 'book'
-require_relative 'label'
 require_relative 'save_files'
 
 class App
@@ -35,7 +34,7 @@ class App
     when '5'
       Genre.list_genres(@things)
     when '6'
-      Label.list_labels(@things)
+      6
     when '7'
       Author.list_authors(@things)
     when '8'
