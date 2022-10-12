@@ -4,13 +4,27 @@
     "cover_state": "Lord of the Rings",
     "publisher": "Wilsons",
     "label": {
-      "id": 699,
-      "color": null
+      "id": 413,
+      "color": "black"
     },
     "author": {
       "first_name": "Jhon",
       "last_name": "Walker",
       "id": 986
+    }
+  },
+  {
+    "publish_date": 2010,
+    "cover_state": "Harry Potter",
+    "publisher": "vitor",
+    "label": {
+      "id": 142,
+      "color": "orange"
+    },
+    "author": {
+      "first_name": "JK",
+      "last_name": "Rowling",
+      "id": 196
     }
   }
 ]

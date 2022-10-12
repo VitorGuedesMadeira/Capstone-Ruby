@@ -137,7 +137,7 @@ class SaveFiles
         cover_state: thing.cover_state,
         publisher: thing.publisher,
         label: {
-          id: thing.id,
+          id: thing.label.id,
           color: thing.label.color
         },
         author: {
@@ -159,7 +159,7 @@ class SaveFiles
     data = JSON.parse(books_file.read)
     data.each do |book|
       new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
-      new_label = Label.new(book['cover_state'], book['label']['book_color'])
+      new_label = Label.new(book['cover_state'], book['label']['color'])
       new_label.id = book['label']['id']
       new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
       new_author.id = book['author']['id']
