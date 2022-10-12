@@ -1,30 +1,17 @@
 [
   {
-    "publish_date": 2022,
-    "cover_state": "Lord of the Rings",
-    "publisher": "Wilsons",
-    "label": {
-      "id": 413,
-      "color": "black"
-    },
-    "author": {
-      "first_name": "Jhon",
-      "last_name": "Walker",
-      "id": 986
-    }
-  },
-  {
     "publish_date": 2010,
-    "cover_state": "Harry Potter",
-    "publisher": "vitor",
+    "cover_state": "bad",
+    "publisher": "Tolkien",
     "label": {
-      "id": 142,
-      "color": "orange"
+      "title": "LOTR",
+      "id": 903,
+      "color": "brown"
     },
     "author": {
-      "first_name": "JK",
-      "last_name": "Rowling",
-      "id": 196
+      "first_name": "Muhammad",
+      "last_name": "Ashraf",
+      "id": 549
     }
   }
 ]

@@ -15,7 +15,7 @@ class Book < Item
   def self.list_books(books)
     books.each_with_index do |book, index|
       if book.instance_of? Book
-        puts "[#{index}] The Book: #{book.lable.title} by #{book.author.first_name} #{book.author.last_name} has been Published by #{book.publisher} on #{book.publish_date}"
+        puts "[#{index}] The Book: #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been Published by #{book.publisher} on #{book.publish_date}"
       end
     end
   end
@@ -31,8 +31,8 @@ class Book < Item
     publisher = gets.chomp
     print 'Type publishing date [year]: '
     book_date = gets.chomp.to_i
-    print "\nType a Cover State of the Book: "
-    cover_state = gets.chomp
+    print "\nType a Cover State of the Book [good/bad]: "
+    cover_state = gets.chomp.downcase
     print "\nType the color of the Book: "
     book_color = gets.chomp
 
