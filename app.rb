@@ -2,6 +2,7 @@ require_relative 'user_options'
 require_relative 'movie'
 require_relative 'music_album'
 require_relative 'game'
+require_relative 'book'
 require_relative 'save_files'
 
 class App
@@ -23,7 +24,7 @@ class App
   def choosing_answers(choice)
     case choice
     when '1'
-      1
+      Book.list_books(@things)
     when '2'
       MusicAlbum.list_music_album(@things)
     when '3'
@@ -39,7 +40,7 @@ class App
     when '8'
       Source.list_sources(@things)
     when '9'
-      9
+      @things << Book.add_book
     when '10'
       @things << MusicAlbum.add_music_album
     when '11'
