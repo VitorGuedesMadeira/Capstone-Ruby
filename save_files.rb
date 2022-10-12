@@ -126,30 +126,6 @@ class SaveFiles
     array_games
   end
 
-   # read_Books
-   def self.read_books
-    array_books = []
-    return array_books unless File.exist?('./data/books.json')
-
-    books_file = File.open('./data/books.json')
-    data = JSON.parse(books_file.read)
-    data.each do |book|
-      new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
-      
-      new_label = Label.new(new_book['cover_state']['title'], new_book['book_color'])
-      new_label.id = new_book['cover_state']['id']
-      new_label.add_item(new_book)
-
-      
-      new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
-      new_author.id = book['author']['id']
-      new_author.add_item(new_book)
-      array_books << new_book
-    end
-    books_file.close
-    array_books
-  end
-
   # write_Books
   def self.write_books(things)
     books_data_array = []
@@ -158,10 +134,12 @@ class SaveFiles
 
       books_data_array << {
         publish_date: thing.publish_date,
-        id: thing.id,
         cover_state: thing.cover_state,
         publisher: thing.publisher,
-        # book_color: label.thing.book_color,
+        label: {
+          id: thing.id,
+          color: thing.label.color
+        },
         author: {
           first_name: thing.author.first_name,
           last_name: thing.author.last_name,
@@ -178,7 +156,6 @@ class SaveFiles
     things.concat read_music_albums
     things.concat read_movies
     things.concat read_games
-    things.concat read_books
     things
   end
 
