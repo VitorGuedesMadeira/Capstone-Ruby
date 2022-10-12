@@ -17,7 +17,18 @@ class Movie < Item
   end
 
   def self.add_movie
-    print "\nType a publish date [year]: "
+    print 'Enter the name of the movie: '
+    label_title = gets.chomp
+    print 'Director\'s first name?: '
+    author_first_name = gets.chomp
+    print 'Director\'s last name?: '
+    author_last_name = gets.chomp
+    print 'Enter the movie\'s genre: '
+    genre_name = gets.chomp
+    print 'Enter the source of the movie: '
+    source_name = gets.chomp
+    #item inputs
+    print "\nWhat's the publish date? [year] "
     print "\nAnswer: "
     movie_date = gets.chomp.to_i
     print 'Is it a silent movie? [y/n]'
@@ -29,14 +40,21 @@ class Movie < Item
                     else
                       false
                     end
-    print 'What is the source?'
-    print "\nAnswer: "
-    source_name = gets.chomp
 
     new_movie = Movie.new(movie_date, silent_answer)
 
     new_source = Source.new(source_name)
     new_source.add_item(new_movie)
+
+    new_author = Author.new(author_first_name, author_last_name)
+    new_author.add_item(new_movie)
+
+    new_label = Label.new(label_title, 'unknown')
+    new_label.add_item(new_movie)
+
+    new_genre = Genre.new(genre_name)
+    new_genre.add_item(new_movie)
+
     new_movie
   end
 

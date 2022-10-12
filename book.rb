@@ -4,6 +4,7 @@ require_relative 'author'
 require_relative 'label'
 
 class Book < Item
+  attr_accessor :id
   attr_accessor :cover_state, :publisher
 
   def initialize(*args, cover_state, publisher)
@@ -22,27 +23,41 @@ class Book < Item
 
   def self.add_book
     print 'Enter Title of the Book: '
-    book_title = gets.chomp
-    print 'Author\'s first name?: '
+    label_title = gets.chomp
+    print "Type the color of the Book: "
+    label_color = gets.chomp
+    print 'Author\'s first name: '
     author_first_name = gets.chomp
-    print 'Author\'s last name?: '
+    print 'Author\'s last name: '
     author_last_name = gets.chomp
-    print "\nType the Name of the publisher: "
+    print 'Enter the book\'s genre: '
+    genre_name = gets.chomp
+    print 'Enter the source of this book: '
+    source_name = gets.chomp
+    #item inputs
+    print "\nWhat's the name of the publisher?"
+    print "\nAnswer: "
     publisher = gets.chomp
-    print 'Type publishing date [year]: '
+    print 'What\s the publishing date? [year]'
+    print "\nAnswer: "
     book_date = gets.chomp.to_i
-    print "\nType a Cover State of the Book [good/bad]: "
+    print "What's the cover state of the book? [good/bad] "
     cover_state = gets.chomp.downcase
-    print "\nType the color of the Book: "
-    book_color = gets.chomp
 
     new_book = Book.new(book_date, cover_state, publisher)
     puts "The book '#{cover_state.upcase}' by #{publisher.upcase} was created successfully!"
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_book)
 
-    new_label = Label.new(book_title, book_color)
+    new_label = Label.new(label_title, label_color)
     new_label.add_item(new_book)
+
+    new_genre = Genre.new(genre_name)
+    new_genre.add_item(new_book)
+
+    new_source = Source.new(source_name)
+    new_source.add_item(new_book)
+
     new_book
   end
 

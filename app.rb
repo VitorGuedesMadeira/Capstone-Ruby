@@ -50,6 +50,8 @@ class App
       @things << Game.add_game
     when '13'
       SaveFiles.write_things(@things)
+      puts "See you later! :)"
+      puts "Co-authors: Vitor Guedes | Diego Yon | Muhammad Ashraf"
       exit
     else
       puts 'Please insert a valid number!'

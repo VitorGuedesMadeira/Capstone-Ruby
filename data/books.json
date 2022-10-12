@@ -1,17 +1,50 @@
 [
   {
-    "publish_date": 2010,
-    "cover_state": "bad",
+    "publish_date": 2007,
+    "cover_state": "good",
     "publisher": "Tolkien",
+    "id": 109,
     "label": {
-      "title": "LOTR",
-      "id": 903,
-      "color": "brown"
+      "title": "Lord of The Rings",
+      "id": 19,
+      "color": "Black"
     },
     "author": {
-      "first_name": "Muhammad",
-      "last_name": "Ashraf",
-      "id": 549
+      "first_name": "Tolkien",
+      "last_name": "J.R.R.",
+      "id": 278
+    },
+    "genre": {
+      "name": "Fantasy",
+      "id": 634
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 105
+    }
+  },
+  {
+    "publish_date": 2007,
+    "cover_state": "good",
+    "publisher": "Tolkien",
+    "id": 209,
+    "label": {
+      "title": "Lord of The Rings",
+      "id": 963,
+      "color": "Black"
+    },
+    "author": {
+      "first_name": "Tolkien",
+      "last_name": "J.R.R.",
+      "id": 789
+    },
+    "genre": {
+      "name": "Fantasy",
+      "id": 583
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 832
     }
   }
 ]
