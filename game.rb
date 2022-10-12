@@ -18,7 +18,18 @@ class Game < Item
   end
 
   def self.add_game
-    print "\nType a publish date [year]: "
+    print 'Enter name of the game: '
+    label_title = gets.chomp
+    print 'Games\'s creator first name: '
+    author_first_name = gets.chomp
+    print 'Game\'s creator last name: '
+    author_last_name = gets.chomp
+    print 'Enter the game\'s genre: '
+    genre_name = gets.chomp
+    print 'Enter the source of this game: '
+    source_name = gets.chomp
+    # item inputs
+    print "\nWhat's the publish date? [year] "
     print "\nAnswer: "
     game_date = gets.chomp.to_i
     print 'Is it a multiplayer game? [y/n]'
@@ -36,15 +47,17 @@ class Game < Item
 
     new_game = Game.new(game_date, multiplayer_answer, last_played)
 
-    print 'Author\'s first name?'
-    print "\nAnswer: "
-    author_first_name = gets.chomp
-
-    print 'Author\'s last name?'
-    print "\nAnswer: "
-    author_last_name = gets.chomp
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_game)
+
+    new_label = Label.new(label_title, 'unknown')
+    new_label.add_item(new_game)
+
+    new_genre = Genre.new(genre_name)
+    new_genre.add_item(new_game)
+
+    new_source = Source.new(source_name)
+    new_source.add_item(new_game)
 
     new_game
   end

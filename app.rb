@@ -12,6 +12,12 @@ class App
   end
 
   def run
+    puts '        _                                       '
+    puts '  /\\/\\ (_) ___ _ __ _____   _____ _ __ ___  ___ '
+    puts " /    \\| |/ __| '__/ _ \\ \\ / / _ \\ '__/ __|/ _ \\"
+    puts '/ /\\/\\ \\ | (__| | | (_) \\ V /  __/ |  \\__ \\  __/'
+    puts '\\/    \\/_|\\___|_|  \\___/ \\_/ \\___|_|  |___/\\___|'
+
     puts "\nWelcome to my catalog!"
     keep_looping = true
     while keep_looping
@@ -50,6 +56,9 @@ class App
       @things << Game.add_game
     when '13'
       SaveFiles.write_things(@things)
+      puts "\nSee you later! :)"
+      puts 'Co-authors: Vitor Guedes | Diego Yon | Muhammad Ashraf'
+      puts ''
       exit
     else
       puts 'Please insert a valid number!'

@@ -48,7 +48,14 @@ CREATE TABLE games(
     PRIMARY KEY(id),
     CONSTRAINT fk_authors FOREIGN KEY(games_id) REFERENCES authors(id)
 );
--- Books
+-- labels
+CREATE TABLE labels(
+    id INT GENERATED ALWAYS AS IDENTITY,
+    title VARCHAR(50),
+    color VARCHAR(50),
+    PRIMARY KEY(id)
+);
+-- books
 CREATE TABLE books(
     id INT GENERATED ALWAYS AS IDENTITY,
     publish_date DATE NOT NULL,
@@ -56,12 +63,12 @@ CREATE TABLE books(
     cover_state VARCHAR(150),
     publisher VARCHAR(150),
     book_color VARCHAR(50),
-    games_id INT,
+    books_id INT,
     PRIMARY KEY(id),
-    CONSTRAINT fk_authors FOREIGN KEY(books_id) REFERENCES authors(id)
+    CONSTRAINT fk_labels FOREIGN KEY(books_id) REFERENCES labels(id)
 );
 -- generating indexes for performance
 CREATE INDEX movie_source_idx ON movies(sources_id);
 CREATE INDEX music_genre_idx ON music_albums(genres_id);
 CREATE INDEX game_author_idx ON games(authors_id);
-CREATE INDEX book_author_idx ON books(authors_id);
+CREATE INDEX book_label_idx ON books(labels_id);

@@ -1,24 +1,26 @@
 [
   {
-    "publish_date": 2020,
-    "id": 423,
+    "publish_date": 2014,
+    "id": 900,
     "multiplayer": true,
-    "last_played_at": 2010,
+    "last_played_at": 2019,
+    "label": {
+      "title": "GTA V",
+      "id": 942,
+      "color": "unknown"
+    },
     "author": {
-      "first_name": "microsoft",
-      "last_name": "studios",
-      "id": 58
-    }
-  },
-  {
-    "publish_date": 2022,
-    "id": 318,
-    "multiplayer": true,
-    "last_played_at": 2020,
-    "author": {
-      "first_name": "Diego",
-      "last_name": "Yon",
-      "id": 361
+      "first_name": "Online",
+      "last_name": "Games",
+      "id": 217
+    },
+    "genre": {
+      "name": "Adventure",
+      "id": 934
+    },
+    "source": {
+      "name": "Steam",
+      "id": 517
     }
   }
 ]
