@@ -150,26 +150,26 @@ class SaveFiles
     File.write('./data/books.json', JSON.pretty_generate(books_data_array))
   end
 
-    # read_Books
-    def self.read_books
-      array_books = []
-      return array_books unless File.exist?('./data/books.json')
-  
-      books_file = File.open('./data/books.json')
-      data = JSON.parse(books_file.read)
-      data.each do |book|
-        new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
-        new_label = Label.new(book['cover_state'], book['label']['book_color'])
-        new_label.id=book['label']['id']
-        new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
-        new_author.id = book['author']['id']
-        new_author.add_item(new_book)
-        new_label.add_item(new_book)
-        array_books << new_book
-      end
-      books_file.close
-      array_books
+  # read_Books
+  def self.read_books
+    array_books = []
+    return array_books unless File.exist?('./data/books.json')
+
+    books_file = File.open('./data/books.json')
+    data = JSON.parse(books_file.read)
+    data.each do |book|
+      new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'])
+      new_label = Label.new(book['cover_state'], book['label']['book_color'])
+      new_label.id = book['label']['id']
+      new_author = Author.new(book['author']['first_name'], book['author']['last_name'])
+      new_author.id = book['author']['id']
+      new_author.add_item(new_book)
+      new_label.add_item(new_book)
+      array_books << new_book
     end
+    books_file.close
+    array_books
+  end
 
   # read ALL files
   def self.read_files

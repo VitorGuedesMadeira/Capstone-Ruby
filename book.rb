@@ -21,7 +21,6 @@ class Book < Item
   end
 
   def self.add_book
-    
     print "\nType a Cover State of the Book: "
     cover_state = gets.chomp
     print 'Author\'s first name?: '
