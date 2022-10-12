@@ -14,7 +14,7 @@ class Book < Item
   
   def self.list_books(books)
     books.each_with_index do |books, index|
-      puts "[#{index}] The Book: #{books.cover_state} by #{books.author.first_name} #{books.author.last_name} has been Published by #{books.publisher} on #{books.book_date}" if books.instance_of? Book
+      puts "[#{index}] The Book: #{books.cover_state} by #{books.author.first_name} #{books.author.last_name} has been Published by #{books.publisher} on #{books.publish_date}" if books.instance_of? Book
     end
   end
 
