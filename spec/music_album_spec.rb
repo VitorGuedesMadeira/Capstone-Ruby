@@ -2,7 +2,7 @@ require_relative '../things/music_album'
 
 describe MusicAlbum do
   before(:each) do
-    @music_album = MusicAlbum.new(2010, true)
+    @music_album = MusicAlbum.new(true, 2010)
     @music_album.move_to_archive
   end
 
