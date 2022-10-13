@@ -1,9 +1,9 @@
 require_relative '../item'
 
 class Game < Item
-  attr_accessor :multiplayer, :last_played_at
+  attr_accessor :multiplayer, :last_played_at, :id
 
-  def initialize(*args, multiplayer, last_played_at)
+  def initialize(multiplayer, last_played_at, *args)
     super(*args)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
@@ -47,7 +47,7 @@ class Game < Item
     print "\nAnswer: "
     last_played = gets.chomp.to_i
 
-    new_game = Game.new(game_date, multiplayer_answer, last_played)
+    new_game = Game.new(multiplayer_answer, last_played, game_date)
 
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_game)

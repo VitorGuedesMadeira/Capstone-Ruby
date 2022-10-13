@@ -1,9 +1,9 @@
 require_relative '../item'
 
 class Movie < Item
-  attr_accessor :silent
+  attr_accessor :silent, :id
 
-  def initialize(*args, silent)
+  def initialize(silent, *args)
     super(*args)
     @silent = silent
   end
@@ -43,7 +43,7 @@ class Movie < Item
                       false
                     end
 
-    new_movie = Movie.new(movie_date, silent_answer)
+    new_movie = Movie.new(silent_answer, movie_date)
 
     new_source = Source.new(source_name)
     new_source.add_item(new_movie)

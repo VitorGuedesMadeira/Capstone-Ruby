@@ -1,12 +1,12 @@
 [
   {
     "publish_date": 2007,
-    "cover_state": "Tolkien",
-    "publisher": 109,
-    "id": "good",
+    "cover_state": "good",
+    "publisher": "Tolkien",
+    "id": 109,
     "label": {
       "title": "Lord of The Rings",
-      "id": 19,
+      "id": "TESTING",
       "color": "Black"
     },
     "author": {
@@ -25,12 +25,12 @@
   },
   {
     "publish_date": 2007,
-    "cover_state": "Tolkien",
-    "publisher": 209,
-    "id": "good",
+    "cover_state": "good",
+    "publisher": "Tolkien",
+    "id": 209,
     "label": {
       "title": "Lord of The Rings",
-      "id": 963,
+      "id": "TESTING",
       "color": "Black"
     },
     "author": {
@@ -49,12 +49,12 @@
   },
   {
     "publish_date": 2001,
-    "cover_state": "J.K.Rowling",
-    "publisher": 186,
-    "id": "good",
+    "cover_state": "good",
+    "publisher": "J.K.Rowling",
+    "id": 186,
     "label": {
       "title": "Harry Potter",
-      "id": 718,
+      "id": "TESTING",
       "color": "Black"
     },
     "author": {
@@ -73,12 +73,12 @@
   },
   {
     "publish_date": 2010,
-    "cover_state": "Shing Ling",
-    "publisher": 846,
-    "id": "good",
+    "cover_state": "good",
+    "publisher": "Shing Ling",
+    "id": 846,
     "label": {
       "title": "Art of War",
-      "id": 474,
+      "id": "TESTING",
       "color": "red"
     },
     "author": {

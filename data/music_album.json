@@ -1,8 +1,8 @@
 [
   {
     "publish_date": 2010,
-    "id": 219,
-    "on_spotify": true,
+    "id": true,
+    "on_spotify": 219,
     "label": {
       "title": "Summer Hits",
       "id": 701,
@@ -24,8 +24,8 @@
   },
   {
     "publish_date": 2014,
-    "id": 287,
-    "on_spotify": true,
+    "id": true,
+    "on_spotify": 287,
     "label": {
       "title": "ELETROHITS",
       "id": 6,

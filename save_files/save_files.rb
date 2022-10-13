@@ -46,7 +46,7 @@ class SaveFiles
     music_album_file = File.open('./data/music_album.json')
     data = JSON.parse(music_album_file.read)
     data.each do |music_album|
-      new_music_album = MusicAlbum.new(music_album['publish_date'], music_album['on_spotify'], music_album['id'])
+      new_music_album = MusicAlbum.new(music_album['on_spotify'], music_album['publish_date'], music_album['id'])
       # genre
       new_genre = Genre.new(music_album['genre']['name'], music_album['genre']['id'])
       new_genre.add_item(new_music_album)
@@ -110,7 +110,7 @@ class SaveFiles
     movies_file = File.open('./data/movies.json')
     data = JSON.parse(movies_file.read)
     data.each do |movie|
-      new_movie = Movie.new(movie['publish_date'], movie['silent'], movie['id'])
+      new_movie = Movie.new(movie['silent'], movie['publish_date'], movie['id'])
       # source
       new_source = Source.new(movie['source']['name'], movie['source']['id'])
       new_source.add_item(new_movie)
@@ -172,7 +172,7 @@ class SaveFiles
     games_file = File.open('./data/games.json')
     data = JSON.parse(games_file.read)
     data.each do |game|
-      new_game = Game.new(game['publish_date'], game['multiplayer'], game['last_played_at'], game['id'])
+      new_game = Game.new(game['multiplayer'], game['last_played_at'], game['publish_date'], game['id'])
       # author
       new_author = Author.new(game['author']['first_name'], game['author']['last_name'], game['author']['id'])
       new_author.add_item(new_game)
@@ -234,7 +234,7 @@ class SaveFiles
     books_file = File.open('./data/books.json')
     data = JSON.parse(books_file.read)
     data.each do |book|
-      new_book = Book.new(book['publish_date'], book['cover_state'], book['publisher'], book['id'])
+      new_book = Book.new(book['cover_state'], book['publisher'], book['publish_date'], book['id'])
       # label
       new_label = Label.new(book['label']['title'], book['label']['color'], book['label']['id'])
       new_label.add_item(new_book)

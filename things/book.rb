@@ -1,9 +1,9 @@
 require_relative '../item'
 
 class Book < Item
-  attr_accessor :cover_state, :publisher
+  attr_reader :cover_state, :publisher, :id
 
-  def initialize(*args, cover_state, publisher)
+  def initialize(cover_state, publisher, *args)
     super(*args)
     @publisher = publisher
     @cover_state = cover_state
@@ -42,7 +42,7 @@ class Book < Item
     print "What's the cover state of the book? [good/bad] "
     cover_state = gets.chomp.downcase
 
-    new_book = Book.new(book_date, cover_state, publisher)
+    new_book = Book.new(cover_state, publisher, book_date)
     puts "The book '#{cover_state.upcase}' by #{publisher.upcase} was created successfully!"
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_book)

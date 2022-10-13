@@ -1,8 +1,8 @@
 [
   {
     "publish_date": 2005,
-    "id": 710,
-    "silent": false,
+    "id": false,
+    "silent": 710,
     "label": {
       "title": "Resident Evil",
       "id": 32,
@@ -24,8 +24,8 @@
   },
   {
     "publish_date": 2000,
-    "id": 762,
-    "silent": false,
+    "id": false,
+    "silent": 762,
     "label": {
       "title": "Avatar",
       "id": 145,
@@ -47,8 +47,8 @@
   },
   {
     "publish_date": 2008,
-    "id": 658,
-    "silent": false,
+    "id": false,
+    "silent": 658,
     "label": {
       "title": "Fast and Furious",
       "id": 486,

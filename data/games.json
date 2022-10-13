@@ -1,9 +1,9 @@
 [
   {
     "publish_date": 2014,
-    "id": true,
-    "multiplayer": 2019,
-    "last_played_at": 900,
+    "id": 900,
+    "multiplayer": true,
+    "last_played_at": 2019,
     "label": {
       "title": "GTA V",
       "id": 942,
@@ -25,9 +25,9 @@
   },
   {
     "publish_date": 1994,
-    "id": true,
-    "multiplayer": 2022,
-    "last_played_at": 650,
+    "id": 650,
+    "multiplayer": true,
+    "last_played_at": 2022,
     "label": {
       "title": "Super Mario",
       "id": 583,
@@ -49,9 +49,9 @@
   },
   {
     "publish_date": 1096,
-    "id": false,
-    "multiplayer": 2001,
-    "last_played_at": 125,
+    "id": 125,
+    "multiplayer": false,
+    "last_played_at": 2001,
     "label": {
       "title": "Megaman X",
       "id": 916,
