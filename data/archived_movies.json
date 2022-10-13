@@ -1,3 +1,25 @@
 [
-
+  {
+    "publish_date": 1976,
+    "id": 87,
+    "silent": true,
+    "label": {
+      "title": "Charles Chaplin",
+      "id": 122,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "Ben",
+      "last_name": "Watkinson",
+      "id": 182
+    },
+    "genre": {
+      "name": "Comedy",
+      "id": 287
+    },
+    "source": {
+      "name": "HBO",
+      "id": 525
+    }
+  }
 ]
