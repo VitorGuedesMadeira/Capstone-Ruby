@@ -1,25 +1,3 @@
 [
-  {
-    "publish_date": 2005,
-    "id": 710,
-    "silent": false,
-    "label": {
-      "title": "Resident Evil",
-      "id": 32,
-      "color": "unknown"
-    },
-    "author": {
-      "first_name": "James",
-      "last_name": "Cameron",
-      "id": 894
-    },
-    "genre": {
-      "name": "Terror",
-      "id": 32
-    },
-    "source": {
-      "name": "Netflix",
-      "id": 431
-    }
-  }
+
 ]

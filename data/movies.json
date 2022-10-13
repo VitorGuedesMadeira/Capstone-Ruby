@@ -1,3 +1,25 @@
 [
-
+  {
+    "publish_date": 2021,
+    "id": 613,
+    "silent": false,
+    "label": {
+      "title": "Resident Evil",
+      "id": 345,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "Denn",
+      "last_name": "Walk",
+      "id": 544
+    },
+    "genre": {
+      "name": "Terror",
+      "id": 751
+    },
+    "source": {
+      "name": "Netflix",
+      "id": 53
+    }
+  }
 ]

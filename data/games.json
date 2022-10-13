@@ -46,29 +46,5 @@
       "name": "SNESx",
       "id": 310
     }
-  },
-  {
-    "publish_date": 1096,
-    "id": 125,
-    "multiplayer": false,
-    "last_played_at": 2001,
-    "label": {
-      "title": "Megaman X",
-      "id": 916,
-      "color": "unknown"
-    },
-    "author": {
-      "first_name": "Tamashiro",
-      "last_name": "Tamagoshi",
-      "id": 197
-    },
-    "genre": {
-      "name": "Adventure",
-      "id": 762
-    },
-    "source": {
-      "name": "SNESx",
-      "id": 623
-    }
   }
 ]

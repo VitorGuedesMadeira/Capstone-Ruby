@@ -1,0 +1,25 @@
+[
+  {
+    "publish_date": 2010,
+    "id": 219,
+    "on_spotify": true,
+    "label": {
+      "title": "Summer Hits",
+      "id": 701,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "POP",
+      "last_name": "artists",
+      "id": 405
+    },
+    "genre": {
+      "name": "Pop",
+      "id": 385
+    },
+    "source": {
+      "name": "Spotify",
+      "id": 590
+    }
+  }
+]

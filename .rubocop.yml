@@ -14,7 +14,7 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Max: 50
 Metrics/ClassLength:
-  Max: 400
+  Max: 440
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 30
