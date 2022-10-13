@@ -1,4 +1,3 @@
-require_relative 'book'
 require 'securerandom'
 
 class Label
@@ -23,7 +22,7 @@ class Label
       labels_titles << thing.label.title if thing.instance_of?(Book) && !labels_titles.include?(thing.label.title)
     end
     labels_titles.each_with_index do |title, index|
-      puts "[#{index}] Label: #{title}"
+      puts "[#{index+1}] Label: #{title}"
     end
   end
 end

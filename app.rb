@@ -1,12 +1,11 @@
-require_relative 'user_options'
-require_relative 'movie'
-require_relative 'music_album'
-require_relative 'game'
-require_relative 'book'
-require_relative 'label'
+require_relative './user_interface/user_options'
+require_relative './user_interface/greetings'
+require_relative './user_interface/goodbye'
+require_relative './things/music_album'
+require_relative './things/movie'
+require_relative './things/game'
+require_relative './things/book'
 require_relative 'save_files'
-require_relative 'greetings'
-require_relative 'goodbye'
 
 class App
   def initialize

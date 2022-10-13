@@ -1,7 +1,4 @@
-require_relative 'item'
-require_relative 'source'
-require_relative 'author'
-require_relative 'label'
+require_relative '../item'
 
 class Book < Item
   attr_accessor :id, :cover_state, :publisher

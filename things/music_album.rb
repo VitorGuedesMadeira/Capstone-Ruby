@@ -1,5 +1,4 @@
-require_relative 'item'
-require_relative 'genre'
+require_relative '../item'
 
 class MusicAlbum < Item
   attr_accessor :id

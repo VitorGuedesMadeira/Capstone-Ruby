@@ -1,5 +1,4 @@
-require_relative 'item'
-require_relative 'source'
+require_relative '../item'
 
 class Movie < Item
   attr_accessor :id

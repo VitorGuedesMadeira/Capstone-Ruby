@@ -26,7 +26,7 @@ class Author
                   thing.author.last_name]
     end
     authors.each_with_index do |author, index|
-      puts "[#{index}] Author: #{author[0]} #{author[1]}"
+      puts "[#{index+1}] Author: #{author[0]} #{author[1]}"
     end
   end
 end
