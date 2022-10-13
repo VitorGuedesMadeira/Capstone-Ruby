@@ -13,7 +13,7 @@ class Book < Item
     index = 1
     books.each do |book|
       if book.instance_of? Book
-        puts "\n[#{index}] The book: #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been published by #{book.publisher} on #{book.publish_date}"
+        puts "\n[#{index}] (ID:#{book.id}) The book: #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been published by #{book.publisher} on #{book.publish_date}"
         index += 1
       end
     end

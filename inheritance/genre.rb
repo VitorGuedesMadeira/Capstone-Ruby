@@ -16,12 +16,12 @@ class Genre
   end
 
   def self.list_genres(things)
-    genres_names = []
+    genres = []
     things.each do |thing|
-      genres_names << thing.genre.name if thing.instance_of?(MusicAlbum) && !genres_names.include?(thing.genre.name)
+      genres << thing.genre if thing.instance_of?(MusicAlbum) && !genres.include?(thing.genre.name)
     end
-    genres_names.each_with_index do |name, index|
-      puts "[#{index + 1}] Genre: #{name}"
+    genres.each_with_index do |genre, index|
+      puts "[#{index + 1}] (ID: #{genre.id}) Genre: #{genre.name}"
     end
   end
 end

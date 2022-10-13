@@ -17,12 +17,12 @@ class Label
   end
 
   def self.list_labels(things)
-    labels_titles = []
+    labels = []
     things.each do |thing|
-      labels_titles << thing.label.title if thing.instance_of?(Book) && !labels_titles.include?(thing.label.title)
+      labels << thing.label if thing.instance_of?(Book) && !labels.include?(thing.label.title)
     end
-    labels_titles.each_with_index do |title, index|
-      puts "[#{index + 1}] Label: #{title}"
+    labels.each_with_index do |label, index|
+      puts "[#{index + 1}] (ID: #{label.id}) Label: #{label.title}"
     end
   end
 end

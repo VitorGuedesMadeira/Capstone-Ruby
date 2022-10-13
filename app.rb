@@ -7,10 +7,12 @@ require_relative './things/movie'
 require_relative './things/game'
 require_relative './things/book'
 require_relative './archive/archived'
+require_relative './delete_item/delete_item'
 
 class App
   def initialize
     @things = SaveFiles.read_files
+    @archived_things = []
   end
 
   def run
@@ -42,16 +44,20 @@ class App
     when '8'
       Source.list_sources(@things)
     when '9'
-      Archived.list_can_be_archived(@things)
+      Archived.list_can_be_archived(@things, @archived_things)
     when '10'
-      @things << Book.add_book
+      Archived.list_archived_items(@archived_things)
     when '11'
-      @things << MusicAlbum.add_music_album
+      @things << Book.add_book
     when '12'
-      @things << Movie.add_movie
+      @things << MusicAlbum.add_music_album
     when '13'
-      @things << Game.add_game
+      @things << Movie.add_movie
     when '14'
+      @things << Game.add_game
+    when '15'
+      DeleteItem.delete_item(@things)
+    when '16'
       SaveFiles.write_things(@things)
       Goodbye.goodbye
       exit

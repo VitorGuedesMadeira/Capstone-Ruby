@@ -11,11 +11,13 @@ class UserOptions
       '     7) - List all authors',
       '     8) - List all sources',
       '     9) - List items that can be archived',
-      '    10) - Add a book',
-      '    11) - Add a music album',
-      '    12) - Add a movie',
-      '    13) - Add a game',
-      '    14) - Exit',
+      '    10) - List archived items',
+      '    11) - Add a book',
+      '    12) - Add a music album',
+      '    13) - Add a movie',
+      '    14) - Add a game',
+      '    15) - Delete an item',
+      '    16) - Exit',
       ''
     ]
     puts '________________________________________________'

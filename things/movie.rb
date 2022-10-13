@@ -12,7 +12,7 @@ class Movie < Item
     index = 1
     things.each do |thing|
       if thing.instance_of? Movie
-        puts "\n[#{index}] The movie #{thing.label.title}, genre #{thing.genre.name} was published date on #{thing.publish_date}"
+        puts "\n[#{index}] (ID:#{thing.id}) The movie #{thing.label.title}, genre #{thing.genre.name} was published date in #{thing.publish_date}"
         index += 1
       end
     end

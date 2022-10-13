@@ -6,7 +6,7 @@
     "id": 209,
     "label": {
       "title": "Lord of The Rings",
-      "id": "TESTING",
+      "id": "999",
       "color": "Black"
     },
     "author": {
@@ -30,7 +30,7 @@
     "id": 186,
     "label": {
       "title": "Harry Potter",
-      "id": "TESTING",
+      "id": "123",
       "color": "Black"
     },
     "author": {
@@ -45,30 +45,6 @@
     "source": {
       "name": "Amazon",
       "id": 484
-    }
-  },
-  {
-    "publish_date": 2010,
-    "cover_state": "good",
-    "publisher": "Shing Ling",
-    "id": 846,
-    "label": {
-      "title": "Art of War",
-      "id": "TESTING",
-      "color": "red"
-    },
-    "author": {
-      "first_name": "Shing",
-      "last_name": "Ling",
-      "id": 999
-    },
-    "genre": {
-      "name": "Fiction",
-      "id": 905
-    },
-    "source": {
-      "name": "Amazon",
-      "id": 414
     }
   }
 ]

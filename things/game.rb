@@ -13,7 +13,7 @@ class Game < Item
     index = 1
     things.each do |thing|
       if thing.instance_of? Game
-        puts "\n[#{index}] The game: #{thing.label.title} by #{thing.author.first_name} #{thing.author.last_name} has been published on #{thing.publish_date}"
+        puts "\n[#{index}] (ID:#{thing.id}) The game: #{thing.label.title} by #{thing.author.first_name} #{thing.author.last_name} has been published in #{thing.publish_date}"
         index += 1
       end
     end
@@ -70,7 +70,3 @@ class Game < Item
     super && Time.new.year - last_played_at > 2
   end
 end
-
-# game = Game.new(2010, true, 2019)
-# game.move_to_archive
-# p game

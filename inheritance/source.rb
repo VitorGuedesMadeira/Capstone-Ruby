@@ -16,12 +16,12 @@ class Source
   end
 
   def self.list_sources(things)
-    sources_names = []
+    sources = []
     things.each do |thing|
-      sources_names << thing.source.name if thing.instance_of?(Movie) && !sources_names.include?(thing.source.name)
+      sources << thing.source if thing.instance_of?(Movie) && !sources.include?(thing.source.name)
     end
-    sources_names.each_with_index do |name, index|
-      puts "[#{index + 1}] Source: #{name}"
+    sources.each_with_index do |source, index|
+      puts "[#{index + 1}] (ID: #{source.id}) Source: #{source.name}"
     end
   end
 end

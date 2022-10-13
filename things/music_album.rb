@@ -12,7 +12,7 @@ class MusicAlbum < Item
     index = 1
     things.each do |thing|
       if thing.instance_of? MusicAlbum
-        puts "\n[#{index}] The music album published date is: #{thing.publish_date}, spotify: #{thing.on_spotify}"
+        puts "\n[#{index}] (ID:#{thing.id}) The music album was published in #{thing.publish_date}, spotify: #{thing.on_spotify}"
         index += 1
       end
     end
