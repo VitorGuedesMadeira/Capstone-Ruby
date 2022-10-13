@@ -21,5 +21,28 @@
       "name": "Netflix",
       "id": 53
     }
+  },
+  {
+    "publish_date": 2007,
+    "id": 679,
+    "silent": false,
+    "label": {
+      "title": "X-men",
+      "id": 554,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "James",
+      "last_name": "Cameron",
+      "id": 25
+    },
+    "genre": {
+      "name": "Superhero",
+      "id": 452
+    },
+    "source": {
+      "name": "Marvel",
+      "id": 73
+    }
   }
 ]
