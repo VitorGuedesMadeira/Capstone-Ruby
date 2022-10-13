@@ -1,8 +1,8 @@
 require 'securerandom'
 
 class Author
-  attr_accessor :id
-  attr_reader :first_name, :last_name, :items
+  attr_accessor :first_name, :last_name
+  attr_reader :items, :id
 
   def initialize(first_name, last_name, id = SecureRandom.random_number(1000))
     @first_name = first_name

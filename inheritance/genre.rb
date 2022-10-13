@@ -1,8 +1,8 @@
 require 'securerandom'
 
 class Genre
-  attr_accessor :id
-  attr_reader :name, :items
+  attr_accessor :name
+  attr_reader :items, :id
 
   def initialize(name, id = SecureRandom.random_number(1000))
     @name = name

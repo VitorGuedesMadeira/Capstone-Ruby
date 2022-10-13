@@ -1,7 +1,7 @@
 require_relative '../item'
 
 class MusicAlbum < Item
-  attr_reader :on_spotify
+  attr_accessor :on_spotify
 
   def initialize(*args, on_spotify)
     super(*args)

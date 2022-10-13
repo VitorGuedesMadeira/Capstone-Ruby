@@ -1,7 +1,7 @@
 require_relative '../item'
 
 class Movie < Item
-  attr_reader :silent
+  attr_accessor :silent
 
   def initialize(*args, silent)
     super(*args)

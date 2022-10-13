@@ -1,8 +1,8 @@
 require 'securerandom'
 
 class Label
-  attr_accessor :id
-  attr_reader :title, :items, :color
+  attr_accessor :title, :color
+  attr_reader :id, :items
 
   def initialize(title, color, id = SecureRandom.random_number(1000))
     @title = title
