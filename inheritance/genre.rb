@@ -21,7 +21,7 @@ class Genre
       genres_names << thing.genre.name if thing.instance_of?(MusicAlbum) && !genres_names.include?(thing.genre.name)
     end
     genres_names.each_with_index do |name, index|
-      puts "[#{index+1}] Genre: #{name}"
+      puts "[#{index + 1}] Genre: #{name}"
     end
   end
 end

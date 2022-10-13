@@ -15,7 +15,7 @@ class Game < Item
     things.each do |thing|
       if thing.instance_of? Game
         puts "\n[#{index}] The game: #{thing.label.title} by #{thing.author.first_name} #{thing.author.last_name} has been published on #{thing.publish_date}"
-      index += 1
+        index += 1
       end
     end
   end

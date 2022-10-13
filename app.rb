@@ -1,11 +1,12 @@
 require_relative './user_interface/user_options'
 require_relative './user_interface/greetings'
 require_relative './user_interface/goodbye'
+require_relative './save_files/save_files'
 require_relative './things/music_album'
 require_relative './things/movie'
 require_relative './things/game'
 require_relative './things/book'
-require_relative 'save_files'
+require_relative './archive/archived'
 
 class App
   def initialize
@@ -41,14 +42,16 @@ class App
     when '8'
       Source.list_sources(@things)
     when '9'
-      @things << Book.add_book
+      Archived.list_can_be_archived(@things)
     when '10'
-      @things << MusicAlbum.add_music_album
+      @things << Book.add_book
     when '11'
-      @things << Movie.add_movie
+      @things << MusicAlbum.add_music_album
     when '12'
-      @things << Game.add_game
+      @things << Movie.add_movie
     when '13'
+      @things << Game.add_game
+    when '14'
       SaveFiles.write_things(@things)
       Goodbye.goodbye
       exit

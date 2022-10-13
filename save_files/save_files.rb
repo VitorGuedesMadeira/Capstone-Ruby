@@ -1,8 +1,8 @@
 require 'json'
-require_relative './inheritance/genre'
-require_relative './inheritance/author'
-require_relative './inheritance/label'
-require_relative './inheritance/source'
+require_relative '../inheritance/genre'
+require_relative '../inheritance/author'
+require_relative '../inheritance/label'
+require_relative '../inheritance/source'
 
 class SaveFiles
   # write_MusicAlbums
