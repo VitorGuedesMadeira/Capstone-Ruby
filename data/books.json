@@ -3,30 +3,6 @@
     "publish_date": 2007,
     "cover_state": "good",
     "publisher": "Tolkien",
-    "id": 109,
-    "label": {
-      "title": "Lord of The Rings",
-      "id": "TESTING",
-      "color": "Black"
-    },
-    "author": {
-      "first_name": "Tolkien",
-      "last_name": "J.R.R.",
-      "id": 278
-    },
-    "genre": {
-      "name": "Fantasy",
-      "id": 634
-    },
-    "source": {
-      "name": "Amazon",
-      "id": 105
-    }
-  },
-  {
-    "publish_date": 2007,
-    "cover_state": "good",
-    "publisher": "Tolkien",
     "id": 209,
     "label": {
       "title": "Lord of The Rings",
