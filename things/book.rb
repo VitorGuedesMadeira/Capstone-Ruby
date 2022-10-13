@@ -1,21 +1,20 @@
-require_relative 'item'
-require_relative 'source'
-require_relative 'author'
-require_relative 'label'
+require_relative '../item'
 
 class Book < Item
-  attr_accessor :id, :cover_state, :publisher
+  attr_reader :cover_state, :publisher, :id
 
-  def initialize(*args, cover_state, publisher)
+  def initialize(cover_state, publisher, *args)
     super(*args)
     @publisher = publisher
     @cover_state = cover_state
   end
 
   def self.list_books(books)
-    books.each_with_index do |book, index|
+    index = 1
+    books.each do |book|
       if book.instance_of? Book
-        puts "[#{index}] The Book: #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been Published by #{book.publisher} on #{book.publish_date}"
+        puts "\n[#{index}] The book: #{book.label.title} by #{book.author.first_name} #{book.author.last_name} has been published by #{book.publisher} on #{book.publish_date}"
+        index += 1
       end
     end
   end
@@ -43,7 +42,7 @@ class Book < Item
     print "What's the cover state of the book? [good/bad] "
     cover_state = gets.chomp.downcase
 
-    new_book = Book.new(book_date, cover_state, publisher)
+    new_book = Book.new(cover_state, publisher, book_date)
     puts "The book '#{cover_state.upcase}' by #{publisher.upcase} was created successfully!"
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_book)

@@ -3,34 +3,10 @@
     "publish_date": 2007,
     "cover_state": "good",
     "publisher": "Tolkien",
-    "id": 109,
-    "label": {
-      "title": "Lord of The Rings",
-      "id": 19,
-      "color": "Black"
-    },
-    "author": {
-      "first_name": "Tolkien",
-      "last_name": "J.R.R.",
-      "id": 278
-    },
-    "genre": {
-      "name": "Fantasy",
-      "id": 634
-    },
-    "source": {
-      "name": "Amazon",
-      "id": 105
-    }
-  },
-  {
-    "publish_date": 2007,
-    "cover_state": "good",
-    "publisher": "Tolkien",
     "id": 209,
     "label": {
       "title": "Lord of The Rings",
-      "id": 963,
+      "id": "TESTING",
       "color": "Black"
     },
     "author": {
@@ -45,6 +21,54 @@
     "source": {
       "name": "Amazon",
       "id": 832
+    }
+  },
+  {
+    "publish_date": 2001,
+    "cover_state": "good",
+    "publisher": "J.K.Rowling",
+    "id": 186,
+    "label": {
+      "title": "Harry Potter",
+      "id": "TESTING",
+      "color": "Black"
+    },
+    "author": {
+      "first_name": "J.K.",
+      "last_name": "Rowling",
+      "id": 889
+    },
+    "genre": {
+      "name": "Fantasy",
+      "id": 335
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 484
+    }
+  },
+  {
+    "publish_date": 2010,
+    "cover_state": "good",
+    "publisher": "Shing Ling",
+    "id": 846,
+    "label": {
+      "title": "Art of War",
+      "id": "TESTING",
+      "color": "red"
+    },
+    "author": {
+      "first_name": "Shing",
+      "last_name": "Ling",
+      "id": 999
+    },
+    "genre": {
+      "name": "Fiction",
+      "id": 905
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 414
     }
   }
 ]

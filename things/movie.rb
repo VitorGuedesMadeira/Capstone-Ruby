@@ -1,18 +1,20 @@
-require_relative 'item'
-require_relative 'source'
+require_relative '../item'
 
 class Movie < Item
-  attr_accessor :id
-  attr_reader :silent
+  attr_accessor :silent, :id
 
-  def initialize(*args, silent)
+  def initialize(silent, *args)
     super(*args)
     @silent = silent
   end
 
   def self.list_movies(things)
-    things.each_with_index do |thing, index|
-      puts "[#{index}] The movie published date is: #{thing.publish_date}" if thing.instance_of? Movie
+    index = 1
+    things.each do |thing|
+      if thing.instance_of? Movie
+        puts "\n[#{index}] The movie #{thing.label.title}, genre #{thing.genre.name} was published date on #{thing.publish_date}"
+        index += 1
+      end
     end
   end
 
@@ -41,7 +43,7 @@ class Movie < Item
                       false
                     end
 
-    new_movie = Movie.new(movie_date, silent_answer)
+    new_movie = Movie.new(silent_answer, movie_date)
 
     new_source = Source.new(source_name)
     new_source.add_item(new_movie)

@@ -1,5 +1,5 @@
-require_relative '../genre'
-require_relative '../music_album'
+require_relative '../inheritance/genre'
+require_relative '../things/music_album'
 
 describe Genre do
   before(:each) do

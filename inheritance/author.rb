@@ -1,11 +1,13 @@
-class Author
-  attr_accessor :id
-  attr_reader :first_name, :last_name, :items
+require 'securerandom'
 
-  def initialize(first_name, last_name)
+class Author
+  attr_accessor :first_name, :last_name
+  attr_reader :items, :id
+
+  def initialize(first_name, last_name, id = SecureRandom.random_number(1000))
     @first_name = first_name
     @last_name = last_name
-    @id = rand(1..1000)
+    @id = id
     @items = []
   end
 
@@ -24,7 +26,7 @@ class Author
                   thing.author.last_name]
     end
     authors.each_with_index do |author, index|
-      puts "[#{index}] Author: #{author[0]} #{author[1]}"
+      puts "[#{index + 1}] Author: #{author[0]} #{author[1]}"
     end
   end
 end

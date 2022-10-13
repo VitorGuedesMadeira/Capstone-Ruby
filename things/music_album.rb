@@ -1,18 +1,20 @@
-require_relative 'item'
-require_relative 'genre'
+require_relative '../item'
 
 class MusicAlbum < Item
-  attr_accessor :id
-  attr_reader :on_spotify
+  attr_accessor :on_spotify, :id
 
-  def initialize(*args, on_spotify)
+  def initialize(on_spotify, *args)
     super(*args)
     @on_spotify = on_spotify
   end
 
   def self.list_music_album(things)
-    things.each_with_index do |thing, index|
-      puts "[#{index}] The music album published date is: #{thing.publish_date}, spotify: #{thing.on_spotify}" if thing.instance_of? MusicAlbum
+    index = 1
+    things.each do |thing|
+      if thing.instance_of? MusicAlbum
+        puts "\n[#{index}] The music album published date is: #{thing.publish_date}, spotify: #{thing.on_spotify}"
+        index += 1
+      end
     end
   end
 
@@ -41,7 +43,7 @@ class MusicAlbum < Item
                       false
                     end
 
-    new_music_album = MusicAlbum.new(music_album_date, is_on_spotify)
+    new_music_album = MusicAlbum.new(is_on_spotify, music_album_date)
 
     new_genre = Genre.new(genre_name)
     new_genre.add_item(new_music_album)

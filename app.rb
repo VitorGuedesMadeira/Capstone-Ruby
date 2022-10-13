@@ -1,10 +1,12 @@
-require_relative 'user_options'
-require_relative 'movie'
-require_relative 'music_album'
-require_relative 'game'
-require_relative 'book'
-require_relative 'label'
-require_relative 'save_files'
+require_relative './user_interface/user_options'
+require_relative './user_interface/greetings'
+require_relative './user_interface/goodbye'
+require_relative './save_files/save_files'
+require_relative './things/music_album'
+require_relative './things/movie'
+require_relative './things/game'
+require_relative './things/book'
+require_relative './archive/archived'
 
 class App
   def initialize
@@ -12,24 +14,17 @@ class App
   end
 
   def run
-    puts '        _                                       '
-    puts '  /\\/\\ (_) ___ _ __ _____   _____ _ __ ___  ___ '
-    puts " /    \\| |/ __| '__/ _ \\ \\ / / _ \\ '__/ __|/ _ \\"
-    puts '/ /\\/\\ \\ | (__| | | (_) \\ V /  __/ |  \\__ \\  __/'
-    puts '\\/    \\/_|\\___|_|  \\___/ \\_/ \\___|_|  |___/\\___|'
-
-    puts "\nWelcome to my catalog!"
+    Greetings.greetings
     keep_looping = true
     while keep_looping
       UserOptions.user_options
-      print 'Answer: '
-      choice = gets.chomp
-      choosing_answers(choice)
+      choosing_answers
     end
   end
 
-  def choosing_answers(choice)
-    case choice
+  def choosing_answers
+    print 'Answer: '
+    case gets.chomp
     when '1'
       Book.list_books(@things)
     when '2'
@@ -47,18 +42,18 @@ class App
     when '8'
       Source.list_sources(@things)
     when '9'
-      @things << Book.add_book
+      Archived.list_can_be_archived(@things)
     when '10'
-      @things << MusicAlbum.add_music_album
+      @things << Book.add_book
     when '11'
-      @things << Movie.add_movie
+      @things << MusicAlbum.add_music_album
     when '12'
-      @things << Game.add_game
+      @things << Movie.add_movie
     when '13'
+      @things << Game.add_game
+    when '14'
       SaveFiles.write_things(@things)
-      puts "\nSee you later! :)"
-      puts 'Co-authors: Vitor Guedes | Diego Yon | Muhammad Ashraf'
-      puts ''
+      Goodbye.goodbye
       exit
     else
       puts 'Please insert a valid number!'

@@ -1,19 +1,21 @@
-require_relative 'item'
-require_relative 'author'
+require_relative '../item'
 
 class Game < Item
-  attr_accessor :id
-  attr_reader :multiplayer, :last_played_at
+  attr_accessor :multiplayer, :last_played_at, :id
 
-  def initialize(*args, multiplayer, last_played_at)
+  def initialize(multiplayer, last_played_at, *args)
     super(*args)
     @multiplayer = multiplayer
     @last_played_at = last_played_at
   end
 
   def self.list_games(things)
-    things.each_with_index do |thing, index|
-      puts "[#{index}] The game published date is: #{thing.publish_date}" if thing.instance_of? Game
+    index = 1
+    things.each do |thing|
+      if thing.instance_of? Game
+        puts "\n[#{index}] The game: #{thing.label.title} by #{thing.author.first_name} #{thing.author.last_name} has been published on #{thing.publish_date}"
+        index += 1
+      end
     end
   end
 
@@ -45,7 +47,7 @@ class Game < Item
     print "\nAnswer: "
     last_played = gets.chomp.to_i
 
-    new_game = Game.new(game_date, multiplayer_answer, last_played)
+    new_game = Game.new(multiplayer_answer, last_played, game_date)
 
     new_author = Author.new(author_first_name, author_last_name)
     new_author.add_item(new_game)

@@ -1,14 +1,14 @@
-require_relative 'book'
+require 'securerandom'
 
 class Label
-  attr_accessor :id
-  attr_reader :title, :items, :color
+  attr_accessor :title, :color
+  attr_reader :id, :items
 
-  def initialize(title, color)
+  def initialize(title, color, id = SecureRandom.random_number(1000))
     @title = title
     @color = color
     @items = []
-    @id = Random.rand(1..1000)
+    @id = id
   end
 
   def add_item(item)
@@ -22,7 +22,7 @@ class Label
       labels_titles << thing.label.title if thing.instance_of?(Book) && !labels_titles.include?(thing.label.title)
     end
     labels_titles.each_with_index do |title, index|
-      puts "[#{index}] Label: #{title}"
+      puts "[#{index + 1}] Label: #{title}"
     end
   end
 end

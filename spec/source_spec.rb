@@ -1,5 +1,5 @@
-require_relative '../source'
-require_relative '../movie'
+require_relative '../inheritance/source'
+require_relative '../things/movie'
 
 describe Source do
   before(:each) do
