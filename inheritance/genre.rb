@@ -4,10 +4,10 @@ class Genre
   attr_accessor :id
   attr_reader :name, :items
 
-  def initialize(name)
+  def initialize(name, id = SecureRandom.random_number(1000))
     @name = name
     @items = []
-    @id = SecureRandom.random_number(1000)
+    @id = id
   end
 
   def add_item(item)

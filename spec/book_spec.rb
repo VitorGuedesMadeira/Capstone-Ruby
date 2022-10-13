@@ -1,4 +1,4 @@
-require_relative '../book'
+require_relative '../things/book'
 
 describe Book do
   describe 'can_be_archived?' do

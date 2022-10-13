@@ -4,11 +4,11 @@ class Label
   attr_accessor :id
   attr_reader :title, :items, :color
 
-  def initialize(title, color)
+  def initialize(title, color, id = SecureRandom.random_number(1000))
     @title = title
     @color = color
     @items = []
-    @id = SecureRandom.random_number(1000)
+    @id = id
   end
 
   def add_item(item)

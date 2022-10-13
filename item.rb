@@ -3,10 +3,10 @@ require 'securerandom'
 class Item
   attr_reader :genre, :author, :source, :label, :publish_date, :archived, :id
 
-  def initialize(publish_date)
-    @id = SecureRandom.random_number(1000)
+  def initialize(publish_date, id = SecureRandom.random_number(1000))
     @publish_date = publish_date
     @archived = false
+    @id = id
   end
 
   def add_genre(genre)

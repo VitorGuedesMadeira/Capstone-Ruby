@@ -4,10 +4,10 @@ class Author
   attr_accessor :id
   attr_reader :first_name, :last_name, :items
 
-  def initialize(first_name, last_name)
+  def initialize(first_name, last_name, id = SecureRandom.random_number(1000))
     @first_name = first_name
     @last_name = last_name
-    @id = SecureRandom.random_number(1000)
+    @id = id
     @items = []
   end
 

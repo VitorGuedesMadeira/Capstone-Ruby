@@ -1,4 +1,4 @@
-require_relative '../movie'
+require_relative '../things/movie'
 
 describe Movie do
   describe 'can_be_archived?' do
