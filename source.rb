@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class Source
   attr_accessor :id
   attr_reader :name, :items
@@ -5,7 +7,7 @@ class Source
   def initialize(name)
     @name = name
     @items = []
-    @id = Random.rand(1..1000)
+    @id = SecureRandom.random_number(1000)
   end
 
   def add_item(item)

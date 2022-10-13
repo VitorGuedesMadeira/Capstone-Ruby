@@ -22,5 +22,29 @@
       "name": "Steam",
       "id": 517
     }
+  },
+  {
+    "publish_date": 1994,
+    "id": 650,
+    "multiplayer": true,
+    "last_played_at": 2022,
+    "label": {
+      "title": "Super Mario",
+      "id": 583,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "Kinwawaka Toshiro",
+      "last_name": "Yu",
+      "id": 677
+    },
+    "genre": {
+      "name": "Adventure",
+      "id": 508
+    },
+    "source": {
+      "name": "SNESx",
+      "id": 310
+    }
   }
 ]

@@ -21,5 +21,51 @@
       "name": "Netflix",
       "id": 431
     }
+  },
+  {
+    "publish_date": 2000,
+    "id": 762,
+    "silent": false,
+    "label": {
+      "title": "Avatar",
+      "id": 145,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "James",
+      "last_name": "Cameron",
+      "id": 94
+    },
+    "genre": {
+      "name": "Adventure",
+      "id": 186
+    },
+    "source": {
+      "name": "Amazon",
+      "id": 532
+    }
+  },
+  {
+    "publish_date": 2008,
+    "id": 658,
+    "silent": false,
+    "label": {
+      "title": "Fast and Furious",
+      "id": 486,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "Jack",
+      "last_name": "Snyder",
+      "id": 676
+    },
+    "genre": {
+      "name": "Action",
+      "id": 614
+    },
+    "source": {
+      "name": "Netflix",
+      "id": 454
+    }
   }
 ]

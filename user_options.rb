@@ -17,7 +17,7 @@ class UserOptions
       '    13) - Exit',
       ''
     ]
-    puts '_____________________________________________'
+    puts '________________________________________________'
     puts "\nPlease choose an option by entering a number:"
     puts options
   end

@@ -1,4 +1,5 @@
 require_relative 'book'
+require 'securerandom'
 
 class Label
   attr_accessor :id
@@ -8,7 +9,7 @@ class Label
     @title = title
     @color = color
     @items = []
-    @id = Random.rand(1..1000)
+    @id = SecureRandom.random_number(1000)
   end
 
   def add_item(item)
