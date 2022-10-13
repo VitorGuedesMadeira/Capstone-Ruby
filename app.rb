@@ -11,8 +11,8 @@ require_relative './delete_item/delete_item'
 
 class App
   def initialize
-    @things = SaveFiles.read_files
-    @archived_things = []
+    @things = SaveFiles.read_things
+    @archived_things = SaveFiles.read_archived
   end
 
   def run
@@ -58,7 +58,7 @@ class App
     when '15'
       DeleteItem.delete_item(@things)
     when '16'
-      SaveFiles.write_things(@things)
+      SaveFiles.write_things(@things, @archived_things)
       Goodbye.goodbye
       exit
     else
