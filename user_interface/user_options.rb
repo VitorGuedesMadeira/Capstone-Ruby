@@ -17,11 +17,11 @@ class UserOptions
       '    13) - Add a movie',
       '    14) - Add a game',
       '    15) - Delete an item',
-      '    16) - Exit',
+      '    16) - Exit'.colorize(color: :red).bold,
       ''
     ]
     puts '________________________________________________'
-    puts "\nPlease choose an option by entering a number:"
+    puts "\nPlease choose an option by entering a number:".underline
     puts options
   end
 end

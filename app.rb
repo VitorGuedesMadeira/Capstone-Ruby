@@ -8,6 +8,7 @@ require_relative './things/game'
 require_relative './things/book'
 require_relative './archive/archived'
 require_relative './delete_item/delete_item'
+require 'colorize'
 
 class App
   def initialize
@@ -25,7 +26,7 @@ class App
   end
 
   def choosing_answers
-    print 'Answer: '
+    print 'Answer: '.colorize(color: :blue).bold
     case gets.chomp
     when '1'
       Book.list_books(@things)
