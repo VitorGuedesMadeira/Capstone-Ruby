@@ -1,0 +1,25 @@
+[
+  {
+    "publish_date": 2014,
+    "id": 287,
+    "on_spotify": true,
+    "label": {
+      "title": "ELETROHITS",
+      "id": 6,
+      "color": "unknown"
+    },
+    "author": {
+      "first_name": "Electronic",
+      "last_name": "DJs",
+      "id": 242
+    },
+    "genre": {
+      "name": "Electro",
+      "id": 948
+    },
+    "source": {
+      "name": "Spotify",
+      "id": 69
+    }
+  }
+]
