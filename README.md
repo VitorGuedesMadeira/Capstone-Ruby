@@ -73,17 +73,17 @@ Kindly modify the files as needed.
 
 ## Authors
 
-👤 **Diego Yon**
+👤 **Diego Yon** 🧑🏻‍
 - GitHub: [@diegoyon](https://github.com/diegoyon)
 - Twitter: [@diegoyon](https://twitter.com/diegoyon)
 - LinkedIn: [Diego Yon](https://www.linkedin.com/in/diego-yon/)
 
-👤 **Vitor Guedes Madeira**
+👤 **Vitor Guedes Madeira** 🧑🏻‍
 - GitHub: [@vitorguedesmadeira](https://github.com/VitorGuedesMadeira)
 - Twitter: [@CDahguedes](https://twitter.com/CDahguedes)
 - LinkedIn: [Vitor Guedes](https://www.linkedin.com/in/vitor-guedes-madeira/)
 
-👤 **Muhammad Ashraf Siddiqui** 🧑🏻‍💻
+👤 **Muhammad Ashraf Siddiqui** 🧑🏻‍
 - GitHub: [@for-ashraf](https://github.com/for-ashraf)
 - Twitter: [@forashraf](https://twitter.com/forashraf)
 - LinkedIn: [Muhammad Ashraf](https://www.linkedin.com/in/muhammad-ashraf-30031439/)
